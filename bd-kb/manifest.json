@@ -1,76 +1,252 @@
 {
-  "schema": "boylenet.bd-kb.manifest.v1",
-  "updated_at": "2026-10-19T21:52:07Z",
-  "campaign": "O1789",
-  "total_volumes": 9,
-  "qdrant_collection": {
-    "url": "http://10.0.70.125:6333/collections/bd_master_kb",
-    "dimensions": 1024,
-    "embedding_model": "hybrid-bge-m3-384d-plus-lexical-640d",
-    "chunks_indexed": 28
-  },
-  "openwebui_knowledge_collections": [
-    "bd-kb-master",
-    "bd-kb-bulkdownloader",
-    "bd-kb-cluster-infra",
-    "bd-kb-86-models",
-    "bd-kb-fleet-law",
-    "bd-kb-ci-and-uis"
-  ],
+  "updated_at": "2026-10-19T23:33:57Z",
+  "volume_count": 41,
   "volumes": [
     {
       "filename": "00-BD-KB-MASTER-ENCYCLOPEDIA.md",
-      "size_bytes": 9148,
-      "sha256": "35741de0caca5f5c6da5e77f19dc19300ee630d034c5c4fd7d89a3c165a65a9e",
-      "lines": 106
+      "path": "/home/mboyle/bd-persist/bd-kb/00-BD-KB-MASTER-ENCYCLOPEDIA.md",
+      "bytes": 26452,
+      "sha256": "5555c6f332707a9bed418d16ce0023faa900549b39f9099b7fcec419235091ca"
     },
     {
       "filename": "01-BOYLENET-27NODE-CLUSTER-AND-12U-RACK-BIBLE.md",
-      "size_bytes": 12367,
-      "sha256": "f4f9a6f21ae96dd5de0d1b1d3b4839c542c0932b4776bf22f9254cc013980f83",
-      "lines": 100
+      "path": "/home/mboyle/bd-persist/bd-kb/01-BOYLENET-27NODE-CLUSTER-AND-12U-RACK-BIBLE.md",
+      "bytes": 18962,
+      "sha256": "f156d3205f46d1836319ff76677cca7855540af228977c4db188fa9121af01cc"
     },
     {
       "filename": "01-BULKDOWNLOADER-ARCHITECTURE-AND-CONTRACTS.md",
-      "size_bytes": 6459,
-      "sha256": "0c83b238046f7e02ad70296f5fb57f0f823b36c65ec3bb6c03522a2a53eebf08",
-      "lines": 85
+      "path": "/home/mboyle/bd-persist/bd-kb/01-BULKDOWNLOADER-ARCHITECTURE-AND-CONTRACTS.md",
+      "bytes": 6459,
+      "sha256": "0c83b238046f7e02ad70296f5fb57f0f823b36c65ec3bb6c03522a2a53eebf08"
     },
     {
       "filename": "02-BOYLENET-27NODE-CLUSTER-12U-RACK-VSAN-25GBE.md",
-      "size_bytes": 12367,
-      "sha256": "f4f9a6f21ae96dd5de0d1b1d3b4839c542c0932b4776bf22f9254cc013980f83",
-      "lines": 100
+      "path": "/home/mboyle/bd-persist/bd-kb/02-BOYLENET-27NODE-CLUSTER-12U-RACK-VSAN-25GBE.md",
+      "bytes": 18962,
+      "sha256": "f156d3205f46d1836319ff76677cca7855540af228977c4db188fa9121af01cc"
     },
     {
       "filename": "03-86-MODEL-VAULT-BENCHMARKS-AND-AIRGAP.md",
-      "size_bytes": 13267,
-      "sha256": "b0ef4577a1ce7404e28028104db0b246ae0c90c0f7bf90be2de53f2d0b09b3ae",
-      "lines": 115
+      "path": "/home/mboyle/bd-persist/bd-kb/03-86-MODEL-VAULT-BENCHMARKS-AND-AIRGAP.md",
+      "bytes": 26538,
+      "sha256": "5034138d43492407a9c67e517453544afa43eadb70358c268517c1212c0754ef"
     },
     {
       "filename": "04-FLEET-LAW-RULES-1-86-AND-O1740-ROUTING.md",
-      "size_bytes": 7605,
-      "sha256": "5b2b9c01d3a509b7319e6f3ce7ee831a5c52716a7ebe400bbde1c543e469bdd7",
-      "lines": 67
+      "path": "/home/mboyle/bd-persist/bd-kb/04-FLEET-LAW-RULES-1-86-AND-O1740-ROUTING.md",
+      "bytes": 9577,
+      "sha256": "f110c570560a3fd1268049618f43d3d8de198b78991f10fe49fefea0171dba57"
     },
     {
       "filename": "05-CI-TAXONOMY-RECOVERY-AND-MCP-TOOLS.md",
-      "size_bytes": 9818,
-      "sha256": "44f7d36ab82fa345d7b84acb7acbd4ffaf632d736a7dd6c77ff3d825f82d3e5e",
-      "lines": 83
+      "path": "/home/mboyle/bd-persist/bd-kb/05-CI-TAXONOMY-RECOVERY-AND-MCP-TOOLS.md",
+      "bytes": 17805,
+      "sha256": "b1d470c40756ed6096270d80ef341eb6a217668cb1a5888a2ec61d9c5c86425c"
     },
     {
       "filename": "05-SWARM-OPERATIONS-RECEIPTS-AND-PLAYBOOKS.md",
-      "size_bytes": 707357,
-      "sha256": "4978ec46a6fcee2206cd04553e1cbc6f4f6ac447e75b245081430a215ce0ffeb",
-      "lines": 6652
+      "path": "/home/mboyle/bd-persist/bd-kb/05-SWARM-OPERATIONS-RECEIPTS-AND-PLAYBOOKS.md",
+      "bytes": 711001,
+      "sha256": "f8070cc495766cd2f9d6c6a15b42e31b472fd8d08fb22f79b32039e29ccb8a2a"
     },
     {
       "filename": "06-5PLATFORM-MCP-MODS-HTTPS-AND-215-LEDGER.md",
-      "size_bytes": 15304,
-      "sha256": "64470b4191ee229be6449c97c3e075cd581ded6097d803bea87f85263f741d73",
-      "lines": 133
+      "path": "/home/mboyle/bd-persist/bd-kb/06-5PLATFORM-MCP-MODS-HTTPS-AND-215-LEDGER.md",
+      "bytes": 20301,
+      "sha256": "ca46f27ceadafb4788fed5b3a845c892db065f87f9136abf6eb2e5b178178f57"
+    },
+    {
+      "filename": "07-PM-CREDENTIALS-AND-TRIBAL-KNOWLEDGE-FILE-MAP.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/07-PM-CREDENTIALS-AND-TRIBAL-KNOWLEDGE-FILE-MAP.md",
+      "bytes": 14643,
+      "sha256": "222a1636021228825dc2cd88973ce6fd1d87bea3f7c4c2d43d54bf77cebb79e2"
+    },
+    {
+      "filename": "08-COMPLETE-SERVICES-CONTAINERS-PORTALS-AND-DAEMONS-GUIDE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/08-COMPLETE-SERVICES-CONTAINERS-PORTALS-AND-DAEMONS-GUIDE.md",
+      "bytes": 68776,
+      "sha256": "a9bb2a8975526cf8882365bbe61ae13e3bfee9e2777c02c98bddc1f361af66d0"
+    },
+    {
+      "filename": "09-LLM-ENGINES-CHAT-APPS-AND-LOCAL-TAKEOVER-GUIDE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/09-LLM-ENGINES-CHAT-APPS-AND-LOCAL-TAKEOVER-GUIDE.md",
+      "bytes": 27693,
+      "sha256": "a3f84fa919fc2947ab7b7302845c633396928d4b8f0aad5471b40e9dd9117d94"
+    },
+    {
+      "filename": "10-30AGENT-LOCAL-GPU-AND-CROSSPOOL-LIVE-AUDIT.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/10-30AGENT-LOCAL-GPU-AND-CROSSPOOL-LIVE-AUDIT.md",
+      "bytes": 43186,
+      "sha256": "b2d722d58b2c0770377e33b436de0ca392ce25d71ebb34bc7053580aa4832c22"
+    },
+    {
+      "filename": "11-FABLE5-MASTER-PM-CATCHUP-AND-BEHIND-THE-SCENES-CHRONICLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/11-FABLE5-MASTER-PM-CATCHUP-AND-BEHIND-THE-SCENES-CHRONICLE.md",
+      "bytes": 47722,
+      "sha256": "b668de1d739e44942c0685fdf14e1209d652dc35df9135f2d174b8c2b0611639"
+    },
+    {
+      "filename": "12-FABLE5-UPDATED-PM-HANDOFF-AND-SWARM-STATE-BIBLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/12-FABLE5-UPDATED-PM-HANDOFF-AND-SWARM-STATE-BIBLE.md",
+      "bytes": 39765,
+      "sha256": "b94803c724bd97b95147e1da0cf7999cf2d4305193ab97ba853082ee71801905"
+    },
+    {
+      "filename": "13-OPUS55-COMPLETE-CREDENTIALS-API-KEYS-DB-CREDITS-AND-FILE-MAP-BIBLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/13-OPUS55-COMPLETE-CREDENTIALS-API-KEYS-DB-CREDITS-AND-FILE-MAP-BIBLE.md",
+      "bytes": 59040,
+      "sha256": "6fc9aece13362ec97e5c9592cb57b45045e3c1f55f541c6ea3ab9faf3b3c71e0"
+    },
+    {
+      "filename": "14-OPUS55-COMPLETE-SERVICES-CONTAINERS-DAEMONS-AND-PORTALS-BIBLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/14-OPUS55-COMPLETE-SERVICES-CONTAINERS-DAEMONS-AND-PORTALS-BIBLE.md",
+      "bytes": 75091,
+      "sha256": "e4f927430d628bc488f7a8eccfa52304fa8c5085b1f6aba214cd736cab11ae78"
+    },
+    {
+      "filename": "15-OPUS55-COMPLETE-87-LLMS-4-ENGINES-OPENWEBUI-AND-LOCAL-RELIEF-BIBLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/15-OPUS55-COMPLETE-87-LLMS-4-ENGINES-OPENWEBUI-AND-LOCAL-RELIEF-BIBLE.md",
+      "bytes": 61358,
+      "sha256": "910cd8c37c0c5523e61fc01ee6d091efc9762fb9f6329d418af5b2d03eba3cdb"
+    },
+    {
+      "filename": "16-OPUS55-COMPLETE-339-TOOLS-15-MCPS-39-SKILLS-AND-7-REPOS-BIBLE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/16-OPUS55-COMPLETE-339-TOOLS-15-MCPS-39-SKILLS-AND-7-REPOS-BIBLE.md",
+      "bytes": 59000,
+      "sha256": "6378a784358dd12c046a4f70b4fd2a15171b21efae09345e83db1395db20fc7e"
+    },
+    {
+      "filename": "17-DEEP-BIBLE-SOVEREIGN-GPU-ORCHESTRATOR-4010-AND-TIER-ROUTER.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/17-DEEP-BIBLE-SOVEREIGN-GPU-ORCHESTRATOR-4010-AND-TIER-ROUTER.md",
+      "bytes": 22859,
+      "sha256": "35683addeec17d28bed17530c98f5c798826b6e80064570194e06d6657dddcbe"
+    },
+    {
+      "filename": "18-DEEP-BIBLE-OPENWEBUI-SUPERSUITE-8090-8080-AND-TOOL-GATEWAY-4079.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/18-DEEP-BIBLE-OPENWEBUI-SUPERSUITE-8090-8080-AND-TOOL-GATEWAY-4079.md",
+      "bytes": 24213,
+      "sha256": "13085251657a646787a0221442b7962751ca62b1d874fcda5b5f8b76fd3876b8"
+    },
+    {
+      "filename": "19-DEEP-BIBLE-LITELLM-4000-300MODELS-AND-CUSTOM-AUTH.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/19-DEEP-BIBLE-LITELLM-4000-300MODELS-AND-CUSTOM-AUTH.md",
+      "bytes": 24384,
+      "sha256": "6df96a3132e83a934f3b65701ab9fb40d98b25579fdde51613c150a8192a0519"
+    },
+    {
+      "filename": "20-DEEP-BIBLE-AUTONOMOUS-SWARM-DRIVER-AND-LOCAL-CODING-AGENT.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/20-DEEP-BIBLE-AUTONOMOUS-SWARM-DRIVER-AND-LOCAL-CODING-AGENT.md",
+      "bytes": 26450,
+      "sha256": "39bdd6a8e4ff3c9049dad5d14050d42691a448494cc977ac12b3908658a23582"
+    },
+    {
+      "filename": "21-DEEP-BIBLE-BOYLENET-OS-4085-VISUALIZER-4088-AND-TV-WALL-4083.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/21-DEEP-BIBLE-BOYLENET-OS-4085-VISUALIZER-4088-AND-TV-WALL-4083.md",
+      "bytes": 20922,
+      "sha256": "43646716c19c508fff5018a6153adf7954f52c75e454bb5f7b2766192455cf47"
+    },
+    {
+      "filename": "22-DEEP-BIBLE-339-HOME-BIN-TOOLS-ENCYCLOPEDIA-PART1-A-TO-M.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/22-DEEP-BIBLE-339-HOME-BIN-TOOLS-ENCYCLOPEDIA-PART1-A-TO-M.md",
+      "bytes": 9178,
+      "sha256": "be7dfa506be52814ccbd936162d171b6b8544bb716058027da1943d7a3def24b"
+    },
+    {
+      "filename": "23-DEEP-BIBLE-339-HOME-BIN-TOOLS-ENCYCLOPEDIA-PART2-N-TO-Z.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/23-DEEP-BIBLE-339-HOME-BIN-TOOLS-ENCYCLOPEDIA-PART2-N-TO-Z.md",
+      "bytes": 20380,
+      "sha256": "b070b6afb7e69de667c156b9b580c75f88fa5a775c1a87155dc84fa647b07cc3"
+    },
+    {
+      "filename": "24-CODEX-ASTRA-DEEP-BIBLE-VSPHERE-4ESXI-54VMS-AND-VSAN-STORAGE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/24-CODEX-ASTRA-DEEP-BIBLE-VSPHERE-4ESXI-54VMS-AND-VSAN-STORAGE.md",
+      "bytes": 23190,
+      "sha256": "84478e9dda97b5371452372ca9c8ea90df566211ae5f7a2ba03c7345492a0492"
+    },
+    {
+      "filename": "25-CODEX-TERRA-DEEP-BIBLE-MEASURED-QUOTAS-TELEMETRY-AND-O3416-STATE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/25-CODEX-TERRA-DEEP-BIBLE-MEASURED-QUOTAS-TELEMETRY-AND-O3416-STATE.md",
+      "bytes": 21474,
+      "sha256": "e7d4818f536a1a3500a660128fdddabc49c10d3a5788d71b0443cd56b5dbb2b1"
+    },
+    {
+      "filename": "26-CODEX-SOL-ADVISORY-BIBLE-UNIVERSAL-HARNESS-AND-7-REPOSITORIES.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/26-CODEX-SOL-ADVISORY-BIBLE-UNIVERSAL-HARNESS-AND-7-REPOSITORIES.md",
+      "bytes": 24772,
+      "sha256": "1ca7b4271d3613055522a544b624ff79d679d850f17860bbf3dec5ae9a9d8e2b"
+    },
+    {
+      "filename": "27-AGY-GPTOSS120B-DEEP-BIBLE-NETWORK-HTTPS-443-AND-BROWSER-ORACLES.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/27-AGY-GPTOSS120B-DEEP-BIBLE-NETWORK-HTTPS-443-AND-BROWSER-ORACLES.md",
+      "bytes": 28653,
+      "sha256": "1f646c8503621ea3e3aa442ace8d0e58612ad8683b9b746daf1f90b4eec89d48"
+    },
+    {
+      "filename": "28-LOCAL-QWEN36-HERETIC-STANDBY-RELIEF-COMMANDER-SELF-DOCUMENTATION.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/28-LOCAL-QWEN36-HERETIC-STANDBY-RELIEF-COMMANDER-SELF-DOCUMENTATION.md",
+      "bytes": 14660,
+      "sha256": "cda89c20420374ba6d489e06523ed048b9492043821d4fd7d7b0e235f32aa60c"
+    },
+    {
+      "filename": "29-LOCAL-QWEN3-CODER-30B-TIER1-ENGINE-AND-RAMDISK-PYTEST-GUIDE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/29-LOCAL-QWEN3-CODER-30B-TIER1-ENGINE-AND-RAMDISK-PYTEST-GUIDE.md",
+      "bytes": 17225,
+      "sha256": "b607b0dd688296f55f8f4b663ef208de186d2d74d95db19d564487d90b5bd317"
+    },
+    {
+      "filename": "30-PM-EXECUTIVE-MASTER-INDEX-AND-ONE-PAGE-CHEATSHEET.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/30-PM-EXECUTIVE-MASTER-INDEX-AND-ONE-PAGE-CHEATSHEET.md",
+      "bytes": 20808,
+      "sha256": "12c9a6dabaec89afbe3cf0e408932a1ea1cc9c545e96fb24474aac26157098ca"
+    },
+    {
+      "filename": "31-READONLY-DOSSIER-BH1-ROWS-01-TO-10-HARNESS-GATES-AND-CLAIMS.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/31-READONLY-DOSSIER-BH1-ROWS-01-TO-10-HARNESS-GATES-AND-CLAIMS.md",
+      "bytes": 40009,
+      "sha256": "186f4b9d892f5b3d7ba5d87a3b011cef96a2e600695afc09fb626c2abedecc20"
+    },
+    {
+      "filename": "32-READONLY-DOSSIER-BH1-ROWS-11-TO-20-LAUNCHERS-IDLE-SWEEP-AND-POOL-STATE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/32-READONLY-DOSSIER-BH1-ROWS-11-TO-20-LAUNCHERS-IDLE-SWEEP-AND-POOL-STATE.md",
+      "bytes": 44779,
+      "sha256": "bf43d7030d1bc1cd374b89e2c43a526e4cf247cf814c0343599651e06f8998bd"
+    },
+    {
+      "filename": "33-READONLY-DOSSIER-BH1-ROWS-21-TO-30-CPLUS-AUTOMERGE-AND-COVERAGE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/33-READONLY-DOSSIER-BH1-ROWS-21-TO-30-CPLUS-AUTOMERGE-AND-COVERAGE.md",
+      "bytes": 61109,
+      "sha256": "f2f94fa6ee3746d3ee5ef25de43bb67023071f25b3f9c2b9d6e0a3353283e5d3"
+    },
+    {
+      "filename": "34-READONLY-DOSSIER-BH1-ROWS-31-TO-40-CLAIMS-RETIRE-FEEDER-AND-ONESHOT.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/34-READONLY-DOSSIER-BH1-ROWS-31-TO-40-CLAIMS-RETIRE-FEEDER-AND-ONESHOT.md",
+      "bytes": 59888,
+      "sha256": "0ee2fac0558c9c77b015e74478bdaa888449854fb41079ae5990dce097e6a135"
+    },
+    {
+      "filename": "35-READONLY-DOSSIER-BH1-ROWS-41-TO-48-CLAUDE-JSON-TELEMETRY-AND-BD-CORE.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/35-READONLY-DOSSIER-BH1-ROWS-41-TO-48-CLAUDE-JSON-TELEMETRY-AND-BD-CORE.md",
+      "bytes": 50709,
+      "sha256": "bb27ee11f03559ead5f4bd28f2dfcaa377209c861ebe4d122344ea4fe6dedcdf"
+    },
+    {
+      "filename": "36-READONLY-DOSSIER-BH1-ROWS-49-TO-55-ORIGIN-GUARD-COCKPIT-AND-COST-SENSOR.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/36-READONLY-DOSSIER-BH1-ROWS-49-TO-55-ORIGIN-GUARD-COCKPIT-AND-COST-SENSOR.md",
+      "bytes": 55992,
+      "sha256": "19cfe801280c5eeba28cabe6992791c15501e785ac9feb9d4889e41f2b2924f2"
+    },
+    {
+      "filename": "37-CODEX-ASTRA-55ROW-CONFLICT-MATRIX-AND-WAVE-BATCHING-DOSSIER.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/37-CODEX-ASTRA-55ROW-CONFLICT-MATRIX-AND-WAVE-BATCHING-DOSSIER.md",
+      "bytes": 62940,
+      "sha256": "bedbccd13a6dd4481138dc848a10f91bd893438a5e0a6ceb0ffb9352f82f5876"
+    },
+    {
+      "filename": "38-CODEX-SOL-PM-FABLE-VS-OPUS-ADVISORY-AND-QA-COUNCIL-BRIEFING.md",
+      "path": "/home/mboyle/bd-persist/bd-kb/38-CODEX-SOL-PM-FABLE-VS-OPUS-ADVISORY-AND-QA-COUNCIL-BRIEFING.md",
+      "bytes": 27064,
+      "sha256": "a5735655a9be3dd202ef6fa4988c25efe39a73fd7540c4c30713f1e239bd7fc7"
     }
   ]
 }

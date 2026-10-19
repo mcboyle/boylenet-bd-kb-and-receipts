@@ -130,3 +130,40 @@ All **215** backlog rows across the 6 authoritative Boylenet TSV queues have bee
 | 5 | `/home/mboyle/bd-persist/APP-DL-FIX-QUEUE.tsv` | `9` | **`9` (`100.0%`)** | `0` | `bd-p2-appdl-verifier` (`9/9` `LANDED`/`VERIFIED_NO_OP`) |
 | 6 | `/home/mboyle/bd-persist/O1670-QUEUE.tsv` | `69` | **`69` (`100.0%`)** | `0` | `/home/mboyle/bin/bd-o1670-backlog-runner.py` (`69/69` `VERIFIED`) |
 | **Total** | **6 Authoritative Fleet Queues** | **`215`** | **`215` (`100.0%`)** | **`0`** | **100% Zero-Backlog Certification (`O1789`)** |
+
+---
+
+## 6. `O3394` Fleet-Wide 24-VM Independent OAuth, `300+` `~/bin/bd*` Tools, `15` MCP Servers, `39` Skills & `9` Plugins Parity (`2026-10-19T22:25Z`)
+
+Verified in [`/home/mboyle/bd-persist/state/O3394-ALL-24VMS-CLAUDE-ABCD-CODEX-KIMI-AGY-AUTH-VERIFIED.md`](file:///home/mboyle/bd-persist/state/O3394-ALL-24VMS-CLAUDE-ABCD-CODEX-KIMI-AGY-AUTH-VERIFIED.md) and [`/home/mboyle/bd-persist/state/O3394-FLEET-24VM-PLATFORM-PLUGINS-SKILLS-MODS-PARITY-RECEIPT.md`](file:///home/mboyle/bd-persist/state/O3394-FLEET-24VM-PLATFORM-PLUGINS-SKILLS-MODS-PARITY-RECEIPT.md):
+
+1. **Independent Per-VM OAuth Logins Across All `24 / 24` Active Linux VMs**:
+   - Every active host in `/home/mboyle/.config/bd/hosts` (`test5`, `test2`, `test3`, `test6`, `test4`, `test7`, `bd1`, `bd2`, `bd3`, `bd4`, `fresh149`, `test3big`, `spare12`, `spare7`, `spare8`, `spare5`, `spare6`, `spare9`, `spare2`, `test1`, `spare4`, `spare10`, `cir1`, `cir2`) holds independent OAuth refresh tokens (`claude auth login --claudeai` executed per VM so token refreshes never collide across hosts):
+     - **Pool A (`~/.claude-a` + `~/.claude`)**: `v4tm2wv4p5@privaterelay.appleid.com` (`24 / 24`)
+     - **Pool B (`~/.claude-b`)**: `mcboyle1865@gmail.com` (`24 / 24`)
+     - **Pool C (`~/.claude-c`)**: `matthew.boyle@whmo.mil` (`24 / 24`)
+     - **Pool D (`~/.claude-d`)**: `itdude1865@pm.me` (`24 / 24`)
+   - **Codex (`2.1.303 / 0.163.0`)**: `~/.codex/auth.json` (`Logged in using ChatGPT` on `24 / 24` VMs).
+   - **Kimi (`2.2.0`)**: `~/.kimi-code/credentials/kimi-code-env-0e4f99c69cc27850.json` + `~/.kimi/config.toml` (`OK` on `24 / 24` VMs).
+   - **AGY (`1.4.2`)**: `~/.gemini/antigravity-cli/antigravity-oauth-token` (`OK` on `24 / 24` VMs).
+2. **`300+` `/home/mboyle/bin/bd*` Scripts, `15` MCP Servers, `39` Skills & `9` Plugins Synced (`24 / 24` VMs)**:
+   - **`/home/mboyle/bin/bd*` (`>= 299–300` scripts)**: Repaired `fresh149` (`.149`), `test3big` (`.82`), and `spare4` (`.81`) so every VM has the complete `300+` `bd*` toolset (`bd-boylenet-infra-mcp.py`, `bd-swarm-mod`, `bd-local-coding-agent.py`, `bd-gpu-orchestrator.py`, `bd-tier-router.py`, `bd-serialized-opt-pipeline.py`, `bd-pytest-digest`, `bd-remote-pytest-82`, `bd-oracle`, `bd-airgap`, `bd-raw-ai`, `bd-subagent-router.sh`, etc.).
+   - **`15` MCP Servers (`119` Tools)**: `bd`, `bd-bus`, `bd-fleet`, `bd-fleet-mcp_bd-fleet`, `boylenet-infra` (`21` tools including `https_443_status`), `caveman`, `context-mode`, `fleet-sync`, `hivemind-memory`, `pg-local`, `python-linter`, `ratf`, `serena`, `type-enforcer`, and `vmware-clones` synced across `.claude.json`, `.claude-{a,b,c,d}/.claude.json`, `.codex/config.toml`, `.kimi/mcp.json`, and `.gemini/antigravity-cli/mcp/` on all `24 / 24` VMs.
+   - **`39` Skills (`/home/mboyle/.agents/skills/`) & `9` Plugins (`/home/mboyle/.agents/plugins/`)**: Synced 1:1 across all `24 / 24` VMs (`39 / 9`), alongside `CLAUDE.md` (`8,710B`), `AGENTS.md` (`10,175B`), and `GEMINI.md` (`10,175B`).
+
+---
+
+## 7. Universal Harness Multi-Repository Dispatch (`BD`, `bd-fleet-harness`, `jarvisos_cockpit`, `UniversalSwarmOS`) & 7+ Synced GitHub/Gitea Repos
+
+The Boylenet Universal Harness dispatches tasks across all four primary engineering codebases and continuously mirrors 7+ repositories to both GitHub (`https://github.com/mcboyle/*`) and Local Gitea (`http://10.0.70.164:3000/mboyle/*`):
+
+1. **`BD` (`/home/mboyle/BulkDownloader`)**:
+   - Dispatched via `/home/mboyle/bd-persist/harness/bd-launch-role.sh`, `/home/mboyle/bin/bd-subagent-router.sh`, or `/home/mboyle/bin/bd-local-coding-agent.py` into isolated sandboxes in `/home/mboyle/bd-cuts/` or `/home/mboyle/bd-local-wt/`.
+   - Enforces `O1740` dynamic pool routing (`POOL_STATE.tsv`), `O3409` local/codex first-finisher -> Claude review lens (`Rule 17`), Mod 2 post-edit `.82` 64-core `/dev/shm` ramdisk `bd-pytest-digest`, `bd-regen-order`, and `bd-precut --gate`.
+2. **`bd-fleet-harness` (`/home/mboyle/bd-persist/harness`)**:
+   - Dispatched via the `bd-harness-cut` skill onto dedicated harness control lanes (`.51`, `.54`, `.84`, `.194`, `.186`) using the canonical `FIX` candidate shape and paired regression controls before syncing across all 24 VMs.
+3. **`jarvisos_cockpit` (`/home/mboyle/jarvisos_cockpit` & `:3002` / `:4090`)**:
+   - Dispatched via `boylenet-infra` MCP (`vm_exec`, `browser_oracle_cdp_inspect`) and verified end-to-end via Dual Windows Chrome CDP Browser Oracles (`.137:9222` BattleStation & `.181:9222` Bittorrent) using `bd-oracle-suite-e2e`.
+4. **`UniversalSwarmOS` (`/home/mboyle/UniversalSwarmOS` & `/home/mboyle/git-repos/UniversalSwarmOS`)**:
+   - Integrator-governed (`O1448`) universal multi-pool Swarm OS (`1,162` tracked files, commit `45d4bb640bec`), synchronized alongside `boylenet-swarm-os` (`df78aee51ce2`), `boylenet-openwebui-supersuite` (`dfc582a5a73e`), `boylenet-bd-kb-and-receipts` (`e57a741c281b`), and `boylenet-infra-configs` (`37729db731fc`) with `BOYLENET_SECRET_GUARD` pre-commit redaction (`0` secret leaks).
+

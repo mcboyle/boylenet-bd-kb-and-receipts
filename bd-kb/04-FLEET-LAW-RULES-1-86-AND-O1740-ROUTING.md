@@ -64,3 +64,18 @@ Pools are never hardcoded (`A/B/C/D`). Every launch resolves dynamically from `/
 ### 3.2 Standing Order O1741 (`HUB-GATE`)
 - `HUB_MAX_IOWAIT_PCT = 20.0%`, `HUB_MAX_LOAD1 = 36.0`, `HUB_MAX_PROCS = 8000`.
 - Never bypass or edit `HUB_MAX_IOWAIT_PCT`. When iowait exceeds 20%, run active diagnostics (`vmstat -w 1 2`, `ps aux | grep -E "grep|find|git|ugrep"`, `/home/mboyle/bd-persist/harness/bd-ugrep-reaper.sh --report`).
+
+---
+
+## 4. `2026-10-19T22:25Z` Standing Directives (`O3388`, `O3394`, `O3401`–`O3409`, `O3416`)
+
+1. **`O3394` — 24-VM 4-Platform Auth & Fleet Law Parity (`24 / 24` Active Linux VMs)**:
+   - Every active VM in `/home/mboyle/.config/bd/hosts` holds byte-identical top-level Fleet Law files (`CLAUDE.md` `8,710B`, `AGENTS.md` `10,175B`, `GEMINI.md -> AGENTS.md`), `>=299` `/home/mboyle/bin/bd*` tools, `39` `.agents/skills`, `9` `.agents/plugins`, `15` MCP server definitions, and **independent per-VM OAuth credentials** across Claude Pools `A/B/C/D` (`.claude-{a,b,c,d}/.credentials.json`), Codex (`~/.codex/auth.json`), Kimi (`~/.kimi-code/credentials/`), and AGY (`~/.gemini/antigravity-cli/antigravity-oauth-token`).
+2. **`O3401`–`O3409` — Local GPU / Codex First-Finisher -> Claude Lens Pipeline**:
+   - Local GPU builders (`Qwen3.6-35B-A3B-Heretic` on `.83:18080`, `Qwen3-Coder-30B-A3B` on `.72:8000`/`:8082`, `RTX 2080 Ti` on `.137:11434`) and Codex builders race or execute in isolated `/home/mboyle/bd-local-wt/` sandboxes; first passing candidate (`ruff` + `mypy` + `.82` `/dev/shm` ramdisk `bd-pytest-digest`) advances to an independent Claude review lens (`Rule 17`).
+   - Tracked in `/home/mboyle/bd-persist/state/LOCAL-BUILD-SCORE.tsv` and `/home/mboyle/bd-persist/state/LOCAL-LENS-SCORE.tsv`.
+3. **`O3416` — Messaging Crons Paused Until Explicit Operator Order**:
+   - All automated tmux/say nudger crons and timers across `.164` and the 23 remote VMs are paused (`/home/mboyle/bd-persist/state/PAUSED-O3416-messaging-crons.md`) to prevent prompt collision with `bd-pm-B`. Do **not** re-enable messaging crons without explicit operator order.
+4. **`O3388` — Bug-Hunt Wave 1 (`BH1-01`..`BH1-55` -> `BHC-01`..`BHC-08`) Staged on Hold**:
+   - The 55 Bug-Hunt Wave 1 findings are consolidated into 8 non-overlapping cuts (`BHC-01`..`BHC-08`) in `/home/mboyle/bd-persist/state/ROWS-BUGHUNT-WAVE1-20261019.md` and held until the operator issues `GO`.
+

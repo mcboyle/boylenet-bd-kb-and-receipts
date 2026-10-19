@@ -22,7 +22,7 @@
 
 ---
 
-## 2. All 14 Boylenet MCP Servers (`99` Tools Bridged via `:4079`)
+## 2. All 15 Boylenet MCP Servers (`119` Tools Bridged via `:4079` & Synced Across 24 VMs)
 
 | # | MCP Server | Transport / Endpoint | Key Tools |
 |---:|---|---|---|
@@ -30,16 +30,17 @@
 | 2 | `bd-bus` | stdio `python3 -m bd_bus_mcp` | `bus_publish`, `bus_read`, `bus_summarize`, `bus_record_assertion`, `smt_verify_invariant`, `bus_check_quorum`, `smt_evaluate_consensus` |
 | 3 | `bd-fleet` | stdio `bd-fleet-mcp/server.py` | `invoke_subagent`, `landed_by_content`, `mcp_discover`, `mcp_hydrate`, `premise_verify`, `role_state_get`, `role_state_set`, `say_validate` |
 | 4 | `bd-fleet-mcp_bd-fleet` | stdio `bd-fleet-mcp/server.py` | Fleet premise and role state validation mirror |
-| 5 | `caveman` | stdio `/home/mboyle/.caveman/bin/caveman-mcp` | `caveman_compress`, `caveman_retrieve`, `caveman_stats`, `caveman_toon_encode`, `caveman_toon_decode` |
-| 6 | `context-mode` | stdio `npx -y context-mode` | `ctx_execute`, `ctx_execute_file`, `ctx_index`, `ctx_search`, `ctx_fetch_and_index`, `ctx_batch_execute`, `ctx_stats`, `ctx_doctor`, `ctx_upgrade`, `ctx_purge`, `ctx_insight` |
-| 7 | `fleet-sync` | stdio `fleet_sync_mcp.py` | `publish_lesson` |
-| 8 | `hivemind-memory` | stdio `hivemind-memory/server.py` | `memory_recall`, `memory_store`, `memory_status` |
-| 9 | `pg-local` | PostgreSQL `127.0.0.1:5432/ai_mesh` | `query` |
-| 10 | `python-linter` | stdio `mcp_server_ruff` | `ruff_check`, `ruff_format` |
-| 11 | `ratf` | stdio `mcp_server_ratf` | `ctx_slice`, `ctx_deref`, `ctx_resolve` |
-| 12 | `serena` | stdio `uvx serena` | `find_symbol`, `find_referencing_symbols`, `get_symbols_overview`, `replace_symbol_body`, `insert_after_symbol`, `insert_before_symbol`, `rename_symbol` |
-| 13 | `type-enforcer` | stdio `mcp_server_mypy` | `mypy_check` |
-| 14 | `vmware-clones` | stdio `mcp_server_vmware` (`10.0.70.1`) | `vm_list`, `vm_info`, `vm_clone`, `vm_destroy` |
+| 5 | `boylenet-infra` | stdio `/home/mboyle/bin/bd-boylenet-infra-mcp.py` | **20 Universal Cluster Tools**: `vm_exec`, `vm_browse_files`, `local_coding_agent_fix`, `ramdisk_pytest_digest`, `browser_oracle_query`, `browser_oracle_cdp_inspect`, `bd_kb_search`, `qdrant_hivemind_search`, `qdrant_hivemind_store`, `model_vault_catalog_and_switch`, `raw_unrestricted_llm_call`, `airgap_control`, `pool_quota_router`, `spawn_cross_pool_subagent`, `vsan_esxi_cluster_status`, `unifi_dns_traefik_status`, `openwebui_tool_gateway_call`, `gitea_github_repo_sync`, `sentinel_doctor_autoheal`, `queue_backlog_status`, `https_443_status` |
+| 6 | `caveman` | stdio `/home/mboyle/.caveman/bin/caveman-mcp` | `caveman_compress`, `caveman_retrieve`, `caveman_stats`, `caveman_toon_encode`, `caveman_toon_decode` |
+| 7 | `context-mode` | stdio `npx -y context-mode` | `ctx_execute`, `ctx_execute_file`, `ctx_index`, `ctx_search`, `ctx_fetch_and_index`, `ctx_batch_execute`, `ctx_stats`, `ctx_doctor`, `ctx_upgrade`, `ctx_purge`, `ctx_insight` |
+| 8 | `fleet-sync` | stdio `fleet_sync_mcp.py` | `publish_lesson` |
+| 9 | `hivemind-memory` | stdio `hivemind-memory/server.py` | `memory_recall`, `memory_store`, `memory_status` |
+| 10 | `pg-local` | PostgreSQL `127.0.0.1:5432/ai_mesh` | `query` |
+| 11 | `python-linter` | stdio `mcp_server_ruff` | `ruff_check`, `ruff_format` |
+| 12 | `ratf` | stdio `mcp_server_ratf` | `ctx_slice`, `ctx_deref`, `ctx_resolve` |
+| 13 | `serena` | stdio `uvx serena` | `find_symbol`, `find_referencing_symbols`, `get_symbols_overview`, `replace_symbol_body`, `insert_after_symbol`, `insert_before_symbol`, `rename_symbol` |
+| 14 | `type-enforcer` | stdio `mcp_server_mypy` | `mypy_check` |
+| 15 | `vmware-clones` | stdio `mcp_server_vmware` (`10.0.70.1`) | `vm_list`, `vm_info`, `vm_clone`, `vm_destroy` |
 
 ---
 
@@ -58,9 +59,9 @@
 
 ## 4. All 50 Native OpenWebUI Toolkits (`Toolkits #01`–`#50`)
 
-- **Toolkits `#01`–`#30` (Core Fleet & Developer Super-Suite)**: Web Search (`SearXNG`), URL Markdown Reader, Chrome CDP Browser Oracles (`.137`/`.181`), Git Clone/Pull/Diff/Log, Gitea REST API, File Read/Write/Grep/Glob, Sandboxed Shell & Python Runner, `.82` 64-Core Ramdisk Pytest Runner, Ruff & Mypy Enforcer, RATF & Serena AST Slicer, Qdrant Vector RAG, Hivemind PostgreSQL Memory, 14-Server MCP Bridge, 128 Skills Loader, 4-GPU Orchestrator (`:4010`), `bd-airgap` Switcher, `bd-raw-ai` Bridge, VMware ESXi/vSAN Inspector, 25GbE & 398-DNS Probe, 4-Model Consensus Council, `llama-bench` Query, CyberStrike Security Auditor, ArXiv/Wiki Research, CSV/SQL Data Analyst, Mermaid/SVG Diagrammer, Caveman Compressor, Boylenet 165-View Portal Navigator.
+- **Toolkits `#01`–`#30` (Core Fleet & Developer Super-Suite)**: Web Search (`SearXNG`), URL Markdown Reader, Chrome CDP Browser Oracles (`.137`/`.181`), Git Clone/Pull/Diff/Log, Gitea REST API, File Read/Write/Grep/Glob, Sandboxed Shell & Python Runner, `.82` 64-Core Ramdisk Pytest Runner, Ruff & Mypy Enforcer, RATF & Serena AST Slicer, Qdrant Vector RAG, Hivemind PostgreSQL Memory, 15-Server MCP Bridge, 128 Skills Loader, 4-GPU Orchestrator (`:4010`), `bd-airgap` Switcher, `bd-raw-ai` Bridge, VMware ESXi/vSAN Inspector, 25GbE & 398-DNS Probe, 4-Model Consensus Council, `llama-bench` Query, CyberStrike Security Auditor, ArXiv/Wiki Research, CSV/SQL Data Analyst, Mermaid/SVG Diagrammer, Caveman Compressor, Boylenet 165-View Portal Navigator.
 - **Toolkits `#31`–`#50` (High-ROI Specialist & Infrastructure Suite)**:
-  - `31_bd_knowledge_base_oracle`: Sub-20ms full-text & semantic search across all 6 `BD KB` volumes (`00`–`05`) + Qdrant `bd_master_kb`.
+  - `31_bd_knowledge_base_oracle`: Sub-20ms full-text & semantic search across all `BD KB` volumes (`00`–`09`) + Qdrant `bd_master_kb`.
   - `32_playwright_live_web_scraper`: Headless Playwright DOM scraper, table extractor & screenshotter.
   - `33_deep_research_multi_engine`: Parallel SearXNG + ArXiv + Wikipedia + GitHub + `BD KB` deep research synthesizer.
   - `34_bulkdownloader_cli_and_ytdlp_inspector`: BulkDownloader (`bd`) extractor, route catalog, `PIN_INDEX.json`, and `yt-dlp` inspector.
@@ -80,3 +81,87 @@
   - `48_audio_whisper_tts_music_studio`: Local Whisper STT transcription, Neural TTS WAV synthesis & audio analyzer.
   - `49_flux_1080p_image_and_hud_generator`: Local Flux / 1080p architecture diagram, HUD mockup & PNG image generator.
   - `50_boylenet_doctor_and_self_healer`: 1-Click Boylenet 31-Service Sentinel Doctor (`:4081` / `:4099`) & auto-healer.
+
+---
+
+## 5. Complete Catalog of `300+` `/home/mboyle/bin/bd*` Tools, `39` Skills & `9` Plugins (`O3394` 24-VM Parity)
+
+Under **`O3394`** (`O3394-FLEET-24VM-PLATFORM-PLUGINS-SKILLS-MODS-PARITY-RECEIPT.md`), all **24 active Linux VMs** in `/home/mboyle/.config/bd/hosts` are synchronized with **`>= 299–300` `/home/mboyle/bin/bd*` executable scripts**, **`39` `.agents/skills`**, **`9` `.agents/plugins`**, and **`15` MCP servers**:
+
+### 5.1 Categorized Directory of `300+` `/home/mboyle/bin/bd*` Executables
+1. **Local AI, GPU Orchestration & Inference Engines (`~45` scripts)**:
+   - `bd-gpu-orchestrator.py` (`:4010` Sovereign Local Gateway, `256K`–`1M` `<think>` router), `bd-tier-router.py` (Single-Node No-RPC & Socket-0 NUMA law), `bd-serialized-opt-pipeline.py` (`Stages 0–5`), `bd-local-coding-agent` / `bd-local-coding-agent.py` (`.83:18080` `Qwen3.6-Heretic` + `.137:11434` `RTX 2080 Ti` self-healing coding agent), `bd-raw-ai` (unrestricted direct GGUF CLI), `bd-airgap` (3-layer kernel/LiteLLM/CloudBurst WAN kill-switch), `bd-kv-warmer` (KV-prefix pinning daemon), `bd-prewarm-daemon`, `bd-satellite-router`, `bd-apply-vnuma-52vcpu.sh`, `bd-esxi-numa-vmx-enforce.sh`.
+2. **5-Platform MCP, Swarm Mods & Cross-Pool Subagent Dispatchers (`~55` scripts)**:
+   - `bd-boylenet-infra-mcp.py` (`20`-tool universal MCP server), `bd-swarm-mod` / `bd-swarm-mod.py` (Mods 1–5 CLI & hooks), `bd-subagent-router.sh` (O1740 cross-pool launcher), `bd-cross-platform-swarm-assist.py`, `bd-autonomous-swarm-driver.py`, `bd-relief-puppeteer.py`, `bd-claude-28worker-blitz.py`, `bd-codex-28worker-blitz.py`, `bd-kimi-24worker-blitz.py`, `bd-local-20gpu-10oracle-blitz.py`, `bd-30squad-32ramdisk-blitz.py`, `bd-master-230-swarm-ledger.py`.
+3. **`.82` 64-Core `/dev/shm` Ramdisk Pytest, Precut, AST & Backlog Verifiers (`~60` scripts)**:
+   - `bd-pytest-digest` (`<=3` lines, `<25` tokens, Rule 78), `bd-remote-pytest-82` (`.82` `/dev/shm` tmpfs runner), `bd-test`, `bd-blob-ptr` (Rule 80 CAS pointer decoupler), `bd-ast-diff`, `bd-ci-taxonomy`, `bd-git-hermetic-check`, `bd-o1670-backlog-runner.py` (`69/69` `O1670` verifier), `bd-p2-appdl-verifier`, `bd-backlog-reconciler`, `bd-compound-exec` (Rule 60).
+4. **Web Portals (`:4079`–`:4099`), OpenWebUI Super-Suite & NGINX `:443` Cloudflare HTTPS (`~55` scripts)**:
+   - `bd-openwebui-tool-gateway.py` (`:4079` 50-toolkit + 8-pipeline + 28-VM terminal gateway), `bd-openwebui-sync-tools-skills-mcp.py`, `bd-web-terminal-drawer.py` (`:4083` 116-tile Terminal TV Wall), `bd-letsencrypt-cloudflare` (Cloudflare DNS-01 wildcard TLS provisioner), `bd-https-443-e2e-verifier.py` (`211/211` HTTPS checks), `bd-opencode-web` (`:4096`), and portal daemons for `:4080`–`:4099`.
+5. **VMware vCenter/ESXi/vSAN/25GbE RoCE, Dual Browser Oracles & Telemetry (`~85` scripts)**:
+   - `lib_vsphere_govc.py`, `bd-oracle` (`.137:9222` BattleStation & `.181:9222` Bittorrent Chrome CDP fanout, Rule 79), `bd-telemetry-daemon.py` (Rule 81 zero-token telemetry), `bd-telemetry-guard.py`, `bd-binary-payload`, `bd-doctor`, `bd-sentinel-healer`.
+
+### 5.2 Complete List of All `39` Skills (`/home/mboyle/.agents/skills/`) & `9` Plugins (`/home/mboyle/.agents/plugins/`)
+- **All `39` Agent Skills**:
+  1. `bd-backlog-reconciler`
+  2. `bd-ci-taxonomy`
+  3. `bd-o1670-backlog-burndown`
+  4. `bd-oracle-suite-e2e`
+  5. `bd-p2-appdl-verifier`
+  6. `bd-swarm-mod`
+  7. `boylenet-4platform-bridge`
+  8. `boylenet-architect`
+  9. `boylenet-autonomous-infra`
+  10. `boylenet-autonomous-mods`
+  11. `boylenet-bdkb-hivemind`
+  12. `boylenet-dual-oracle-e2e`
+  13. `boylenet-infra-commander`
+  14. `boylenet-local-coding-agent`
+  15. `cavecrew`
+  16. `caveman`
+  17. `caveman-commit`
+  18. `caveman-compress`
+  19. `caveman-discover`
+  20. `caveman-evidence-review`
+  21. `caveman-explore`
+  22. `caveman-help`
+  23. `caveman-learn`
+  24. `caveman-manage`
+  25. `caveman-optimize`
+  26. `caveman-review`
+  27. `caveman-setup`
+  28. `caveman-stats`
+  29. `cdp-frame-scroll-controls`
+  30. `find-skills`
+  31. `fleet-gridlock-recovery`
+  32. `fleet-satellite-orchestration`
+  33. `investigate-first`
+  34. `lean-build`
+  35. `migration`
+  36. `safe-refactor`
+  37. `surgical-patch`
+  38. `synced`
+  39. `verify-and-stop` *(plus AGY builtin `agy-customizations`, `antigravity-guide`, and plugin skills `bd-agy-dispatch`, `bd-dispatch-ops`, `bd-fleet-mcp`, `bd-harness-cut`, `bd-lens`, `context-guard`, `rebase-orchestrator`)*.
+- **All `9` Fleet Plugins**:
+  1. `bd-autonomous-infra` (`/home/mboyle/.agents/plugins/bd-autonomous-infra`)
+  2. `bd-browser-oracle` (`/home/mboyle/.agents/plugins/bd-browser-oracle`)
+  3. `bd-context-guard` (`/home/mboyle/.agents/plugins/bd-context-guard`)
+  4. `bd-cut-hygiene` (`/home/mboyle/.agents/plugins/bd-cut-hygiene`)
+  5. `bd-dispatch-ops` (`/home/mboyle/.agents/plugins/bd-dispatch-ops`)
+  6. `bd-fleet-mcp` (`/home/mboyle/.agents/plugins/bd-fleet-mcp`)
+  7. `bd-lens` (`/home/mboyle/.agents/plugins/bd-lens`)
+  8. `bd-rebase` (`/home/mboyle/.agents/plugins/bd-rebase`)
+  9. `plugin_data` / `bd-swarm-mod-hooks` (`/home/mboyle/.gemini/antigravity-cli/plugin_data` & Claude/Codex/Kimi hook packs).
+
+---
+
+## 6. Universal Multi-Repository Dispatch Architecture (`BD`, `bd-fleet-harness`, `jarvisos_cockpit`, `UniversalSwarmOS`)
+
+The Boylenet Universal Harness (`/home/mboyle/bd-persist/harness/bd-launch-role.sh`, `/home/mboyle/bin/bd-subagent-router.sh`, `/home/mboyle/bin/bd-boylenet-infra-mcp.py`, and `/home/mboyle/bin/bd-local-coding-agent.py`) dispatches and verifies work seamlessly across all 4 core repositories and the 4 published companion repositories:
+
+| Target Repository | Canonical Checkout / Worktree Root | Dispatch Adapter & Gate Pipeline | Verification & Landing Contract |
+|---|---|---|---|
+| **`BD` (`BulkDownloader`)** | `/home/mboyle/BulkDownloader` (Worktrees in `/home/mboyle/bd-cuts/` & `/home/mboyle/bd-local-wt/`) | `bd-launch-role.sh` / `bd-subagent-router.sh` / `bd-local-coding-agent.py` (`O1740` pool resolution + `O3409` local/codex first-finisher -> Claude lens) | `ruff_check` + `mypy_check` + `.82` 64-core `/dev/shm` `bd-pytest-digest` + `bd-regen-order` + `bd-precut --gate` + `PATCH-SHA256` (`Rule 16`) |
+| **`bd-fleet-harness`** | `/home/mboyle/bd-persist/harness` (`bd-harness-cut` skill) | Dispatched via `bd-harness-cut` (`FIX` candidate shape with paired regression control) onto `.51`/`.54`/`.84`/`.194` harness lanes | Shell/Python syntax & unit check (`bash -n`, `ruff`, `pytest`), `bd-say.sh` / `bd-role-claim.sh` contract verification, and atomic sync to all 24 VMs |
+| **`jarvisos_cockpit`** | `/home/mboyle/jarvisos_cockpit` & `:3002` / `:4090` (`https://jarvis.boylenet.themfboyles.org`) | Dispatched via `boylenet-infra` MCP (`vm_exec`, `browser_oracle_cdp_inspect`) and Kimi/Codex/Local GPU UI/UX workers | Live HTTP `200` + Dual Chrome CDP Browser Oracle (`.137:9222` & `.181:9222`) DOM/console/WebSocket verification (`bd-oracle-suite-e2e`) |
+| **`UniversalSwarmOS`** | `/home/mboyle/UniversalSwarmOS` & `/home/mboyle/git-repos/UniversalSwarmOS` | Integrator-owned (`O1448`) multi-pool orchestration repo; staged in isolated worktrees and verified via `bd-swarm-mod verify` | Full `ruff` + `mypy` + pytest gate + `BOYLENET_SECRET_GUARD` pre-commit scan + dual push to GitHub (`mcboyle/UniversalSwarmOS`) & Local Gitea (`:3000`) |
+

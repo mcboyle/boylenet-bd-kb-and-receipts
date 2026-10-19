@@ -97,3 +97,37 @@
 | **`esxi02`** (`DL380 Gen9`) | `U09–U10` | `10.0.20.42` | `10.0.10.20` (`iLO 4 v2.82`) | `23.0°C` (`73.4°F`) | `40.0°C` / `48.0°C` | `459W` / `462W` / `514W` | `2/2 OK` | `6` / `OK` / `49.2%` |
 | **`esxi03`** (`DL380 Gen10`) | `U07–U08` | `10.0.20.43` | `10.0.10.30` / `.252` (`iLO 5`) | `25.0°C` (`77.0°F`) | `40.0°C` / `41.0°C` | `574W` / `573W` / `680W` | `2/2 OK` | `6` / `OK` / `73.3%` |
 | **`esxi04`** (`DL380 Gen10`) | `U05–U06` | `10.0.20.44` | `10.0.10.40` (`iLO 5`) | `26.0°C` (`78.8°F`) | `40.0°C` / `40.0°C` | `584W` / `591W` / `792W` | `2/2 OK` | `6` / `OK` / `47.2%` |
+
+---
+
+## 5. Post-Resize vCenter VM RAM Table, `esxi01..04` `High Performance` Power Policy & Restored Cold Spares (`2026-10-19T22:25Z` — `AGENT154`, `AGENT170`, `AGENT174`, `AGENT175`)
+
+### 5.1 Post-Resize Core Hub, AI/GPU & Ramdisk VM Allocation Table (`vCenter 10.0.20.70`)
+
+Following the `2026-10-19` operator vCenter right-sizing (`AGENT174-AI-VMS-POST-RESIZE-AND-BENCH-RECEIPTS.md` & `AGENT175-POST-RESIZE-VCENTER-RESOURCE-REPOLL-RECEIPTS.md`), the core Hub Controller (`Test5`) and 4 vSphere Tesla T4 GPU VMs (`AI`, `AI DEV`, `AI Inference`, `llama`) are provisioned as follows:
+
+| vCenter VM Name | `~/.config/bd/hosts` / Hostname | Primary IP (RoCE IP) | ESXi Host | vCPUs & vNUMA Topology | Provisioned vCenter RAM (`Guest Usable`) | Memory Pin & Kernel Sysctls | Primary Workload & Hardware Accelerator |
+|---|---|---|---|---|---|---|---|
+| **`Test5`** | `test5` (`hub-mesh01`) | `10.0.70.164` | `esxi03` (`10.0.20.43`) | `32 vCPU` (`2x16c` Xeon Platinum 8164) | **`250 GiB`** *(resized from `350 GiB` to free `100 GiB` on `esxi03`)* | `sched.mem.pin=TRUE` | Hub Controller, `bd-pm-B`, LiteLLM `:4000`, Sovereign Gateway `:4010`, OpenWebUI `:8090`, Portals `:4079`–`:4099`, NGINX `:443`, Gitea `:3000` |
+| **`AI`** | `ai-srv01` (`ai-srv01.mesh.local`) | `10.0.70.72` (`10.0.75.12`) | `esxi04` (`10.0.20.44`) | `52 vCPU` (`2x26c` Xeon Platinum 8170, `2` vNUMA nodes `0–25`, `26–51`) | **`320 GiB`** (`327,680 MB` vCenter / `314.87 GiB` guest `MemTotal`) | `sched.mem.pin=TRUE`, `numa_balancing=0`, `swappiness=1`, `THP=always` | **NVIDIA Tesla T4 (`16 GB`)**, Tier-1 Coder (`:8000`/`:8082` `256K` ctx), Qwythos (`:18081` `1M` ctx), OpenWebUI Vault A (`:8080`), `/opt/models` (`4.7 TB`) |
+| **`AI DEV`** | `aidev` (`wrk-test01`) | `10.0.70.83` (`10.0.75.11`) | `esxi03` (`10.0.20.43`) | `52 vCPU` (`2x26c` Xeon Platinum 8164, `2` vNUMA nodes `0–25`, `26–51`) | **`400 GiB`** (`395,264 MB` vCenter / `295.19`–`386 GiB` guest tuned) | `sched.mem.pin=TRUE`, `numa_balancing=0`, `swappiness=1`, `THP=always` | **NVIDIA Tesla T4 (`16 GB`)**, Tier-2/3 `Qwen3.6-35B-A3B-Heretic` (`:18080` `256K`–`512K` `<think>` ctx), `/mnt/ai-models` (`4.2 TB`) |
+| **`AI Inference`** | `ai-infer01` (`ai-infer01.mesh.local`) | `10.0.70.125` (`10.0.75.14`) | `esxi01` (`10.0.20.41`) | `48 vCPU` (`2x24c` Xeon E5-2690 v4, `2` vNUMA nodes `0–23`, `24–47`) | **`192 GiB`** *(expanded up to `295.19 GiB` guest usable during `O1789`)* | `numa_balancing=0`, `swappiness=1`, `THP=always` | **NVIDIA Tesla T4 (`16 GB`, `libnvidia-compute=615.71.09` verified)**, Qdrant `:6333` (`6` collections), Ollama `:11434` (`128K` ctx), `rpc-server` `:50052` |
+| **`llama`** | `ai-ollama01` (`ai-ollama01.mesh.local`) | `10.0.70.228` (`10.0.75.13`) | `esxi02` (`10.0.20.42`) | `64 vCPU` (`2x32c` Xeon E5-2699 v4, `2` vNUMA nodes `0–31`, `32–63`) | **`160 GiB`** *(expanded up to `295.18 GiB` guest usable during `O1789`)* | `numa_balancing=0`, `swappiness=1`, `THP=always` | **NVIDIA Tesla T4 (`16 GB`)**, Satellite Ollama `:11434` (`128K` ctx), Langfuse `:3000`, LiteLLM `:4000`, `rpc-server` `:50052` |
+| **`test3big`** | `test3big` (`wrk-test04`) | `10.0.70.82` | `esxi04` (`10.0.20.44`) | `64 vCPU` | **`128 GiB`** (`63 GiB` `/dev/shm` tmpfs ramdisk) | `tmpfs` `/dev/shm` (`2%` used) | 64-Core `/dev/shm` Ramdisk Pytest (`32-shard` runner, `0.0%` `.164` iowait) |
+| **`BattleStation`** | `BattleStation` (Bare-Metal Win11) | `10.0.10.137` | Bare-Metal | `24 Threads` (AMD Ryzen 9 12C/24T) | **`64 GiB`** DDR4 | Rule 84 Hardware Segregation | **NVIDIA RTX 2080 Ti (`11 GB`)** (`qwen2.5-coder:7b-16k` `95.4 tok/s`), Ryzen 9 CPU Embeddings (`nomic`), Chrome CDP Oracle (`:9222`) |
+
+### 5.2 `esxi01..04` `High Performance` Power Policy & HPE iLO BIOS Verification (`AGENT170`, `SERIALIZED-OPT-PIPELINE-LEDGER.md`)
+
+All 4 HPE ProLiant DL380 Gen9/Gen10 hypervisors (`esxi01..04`) are locked to ESXi `High Performance` power policy (`esxcli hardware power policy set --id=1`) and HPE BIOS `StaticHighPerf` / `NoCStates`:
+
+| Hypervisor | Management IP / Alias | iLO IP & Gen | Platform & CPU Topology | ESXi Power Policy (`esxcli` & `vsish`) | HPE BIOS Power Regulator & C-State Profile |
+|---|---|---|---|---|---|
+| **`esxi01`** | `10.0.20.41` / `10.0.70.201` | `10.0.10.10` (`iLO 4`) | HP ProLiant DL380 Gen9 (`2` Pkgs / `28` Cores / `56` Threads, Xeon E5-2690 v4) | **`Id: 1` (`High Performance` / `static`)** | `StaticHighPerf`, `NoCStates`, `MaxPerf` |
+| **`esxi02`** | `10.0.20.42` / `10.0.70.202` | `10.0.10.20` (`iLO 4`) | HP ProLiant DL380 Gen9 (`2` Pkgs / `44` Cores / `88` Threads, Xeon E5-2699 v4) | **`Id: 1` (`High Performance` / `static`)** | `PowerProfile: MaxPerf`, `PowerRegulator: StaticHighPerf`, `MinProcIdlePower: NoCStates`, `IntelQpiPowerManagement: Disabled`, `ProcTurbo: Enabled` |
+| **`esxi03`** | `10.0.20.43` / `10.0.70.203` | `10.0.10.30` / `.252` (`iLO 5`) | HPE ProLiant DL380 Gen10 (`2` Pkgs / `52` Cores / `104` Threads, Xeon Platinum 8164) | **`Id: 1` (`High Performance` / `static`)** | `WorkloadProfile: Virtualization-MaxPerformance`, `PowerRegulator: StaticHighPerf`, `MinProcIdlePower: NoCStates`, `IntelUpiPowerManagement: Disabled`, `SubNumaClustering: Enabled` |
+| **`esxi04`** | `10.0.20.44` / `10.0.70.204` | `10.0.10.40` (`iLO 5`) | HPE ProLiant DL380 Gen10 (`2` Pkgs / `52` Cores / `104` Threads, Xeon Platinum 8170) | **`Id: 1` (`High Performance` / `static`)** | `WorkloadProfile: Virtualization-MaxPerformance`, `PowerRegulator: StaticHighPerf`, `MinProcIdlePower: NoCStates`, `IntelUpiPowerManagement: Disabled`, `SubNumaClustering: Enabled` |
+
+### 5.3 Cold Spares Restoration & 24-VM Active Fleet Roster (`AGENT154`, `O3336`, `O3394`)
+
+- Following completion of the `87 / 87` (`100.0%`) benchmark sweep, all **15/16 temporarily powered-off cold spare and seat VMs** (`bd-ci-r1-20261003` `.121`, `bd-ci-r2-20261003` `.86`, `bd-seat-c1-20261003` `.35`, `bd-seat-c2-20261003` `.171`, `spare6` `.186`, `kvcache-cx1-20261014` `.198`, `lens-r3c-cx4-20261014` `.108`, `spare2` `.193`, `spare8` `.184`, `spare3` `.122`, `spare4` `.81`, `Spare1` `.197`, `Spare11` `.195`, `spare` `.224`, `spare10` `.196`, `spare9` `.187`) were restored (`AGENT154-87OF87-FINAL-AND-16-SPARES-RESTORE-RECEIPTS.md`), and all **24 active Linux VMs** in `/home/mboyle/.config/bd/hosts` (`test5`, `test2`, `test3`, `test6`, `test4`, `test7`, `bd1`, `bd2`, `bd3`, `bd4`, `fresh149`, `test3big`, `spare12`, `spare7`, `spare8`, `spare5`, `spare6`, `spare9`, `spare2`, `test1`, `spare4`, `spare10`, `cir1`, `cir2`) were verified online with 100% 4-platform auth & tooling parity (`O3394`).
+
