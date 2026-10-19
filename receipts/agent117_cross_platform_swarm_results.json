@@ -1,0 +1,353 @@
+{
+  "written_at": "2026-10-18T23:37:09Z",
+  "agent": "Agent-117",
+  "all_14_workers_passed": true,
+  "benchmark_isolation_enforced": true,
+  "workers": [
+    {
+      "worker_id": "xplat-claude-A",
+      "platform": "Claude Code Pool A",
+      "backend": "claude-fallback (.228:4000 qwen2.5-coder-7b, orig_rc=1)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-claude-A.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-A.md",
+      "rc": 0,
+      "elapsed_s": 0.325,
+      "say_results": [
+        {
+          "target": "bd-claude-swarm-A",
+          "message": "DISPATCH xplat-claude-A /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-A.md",
+          "rc": 0,
+          "elapsed_s": 11.676,
+          "output": "bd-say: bd-claude-swarm-A sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| ID       | P2-FIX-QUEUE Slice Row Status | Evidence Path | Next Action for bd-pm-B / Integrator |\n|----------|------------------------------|---------------|--------------------------------------|\n| F024     | OPEN-FOR-FIX                 | N/A           | Review F024-bd-worker-B3-B.md and update P2-FIX-QUEUE.tsv |\n| F026     | OPEN-FOR-FIX                 | N/A           | Review COULD NOT LOOK evidence and update P2-FIX-QUEUE.tsv |\n| F027     | OPEN-FOR-FIX                 | N/A           | Review F027-bd-worker-B3-B.md and update P2-FIX-QUEUE.tsv |\n| F028     | OPEN-FOR-FIX                 | N/A           | Review F028-bd-worker-B5-B.md and update P2-FIX-QUEUE.tsv |\n| F029     | OPEN-FOR-FIX                 | N/A           | Review F029-bd-worker-A5-A.md and update P2-FIX-QUEUE.tsv |\n```",
+      "full_output": "```markdown\n| ID       | P2-FIX-QUEUE Slice Row Status | Evidence Path | Next Action for bd-pm-B / Integrator |\n|----------|------------------------------|---------------|--------------------------------------|\n| F024     | OPEN-FOR-FIX                 | N/A           | Review F024-bd-worker-B3-B.md and update P2-FIX-QUEUE.tsv |\n| F026     | OPEN-FOR-FIX                 | N/A           | Review COULD NOT LOOK evidence and update P2-FIX-QUEUE.tsv |\n| F027     | OPEN-FOR-FIX                 | N/A           | Review F027-bd-worker-B3-B.md and update P2-FIX-QUEUE.tsv |\n| F028     | OPEN-FOR-FIX                 | N/A           | Review F028-bd-worker-B5-B.md and update P2-FIX-QUEUE.tsv |\n| F029     | OPEN-FOR-FIX                 | N/A           | Review F029-bd-worker-A5-A.md and update P2-FIX-QUEUE.tsv |\n```"
+    },
+    {
+      "worker_id": "xplat-claude-B",
+      "platform": "Claude Code Pool B",
+      "backend": "claude-fallback (.228:4000 qwen2.5-coder-7b, orig_rc=1)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-claude-B.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-B.md",
+      "rc": 0,
+      "elapsed_s": 0.356,
+      "say_results": [
+        {
+          "target": "bd-claude-swarm-B",
+          "message": "DISPATCH xplat-claude-B /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-B.md",
+          "rc": 0,
+          "elapsed_s": 8.929,
+          "output": "bd-say: bd-claude-swarm-B sent+consumed"
+        },
+        {
+          "target": "bd-pm-B",
+          "message": "DISPATCH xplat-claude-B /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-B.md",
+          "rc": 0,
+          "elapsed_s": 9.133,
+          "output": "bd-say: ESCALATION - bypassing batch queue for bd-pm-B\nbd-say: bd-pm-B sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / Integrator |\n|----------|----------------|-------------------------------------------------------------------------------|--------------------------------------|\n| F031     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Investigate status render issue      |\n| F036     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review UX note                       |\n| F038     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Investigate edit functionality       |\n| F039     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review alert rule creation           |\n| F046     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review diagnostic report rendering   |\n```",
+      "full_output": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / Integrator |\n|----------|----------------|-------------------------------------------------------------------------------|--------------------------------------|\n| F031     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Investigate status render issue      |\n| F036     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review UX note                       |\n| F038     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Investigate edit functionality       |\n| F039     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review alert rule creation           |\n| F046     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv                               | Review diagnostic report rendering   |\n```"
+    },
+    {
+      "worker_id": "xplat-claude-C",
+      "platform": "Claude Code Pool C",
+      "backend": "claude-fallback (.228:4000 qwen2.5-coder-7b, orig_rc=1)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-claude-C.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-C.md",
+      "rc": 0,
+      "elapsed_s": 0.313,
+      "say_results": [
+        {
+          "target": "bd-claude-swarm-C",
+          "message": "DISPATCH xplat-claude-C /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-C.md",
+          "rc": 0,
+          "elapsed_s": 12.241,
+          "output": "bd-say: bd-claude-swarm-C sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / Integrator                                                                 |\n|----------|----------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|\n| F049     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F049 into main.                                                                 |\n| F051     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F051 into main.                                                                 |\n| F054     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F054 into main.                                                                 |\n| F055     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Investigate F055 failure and update the row accordingly.                                            |\n| F057     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F057 into main.                                                                 |\n```",
+      "full_output": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / Integrator                                                                 |\n|----------|----------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|\n| F049     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F049 into main.                                                                 |\n| F051     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F051 into main.                                                                 |\n| F054     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F054 into main.                                                                 |\n| F055     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Investigate F055 failure and update the row accordingly.                                            |\n| F057     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (row127-preflight-ratio-bd-kimi-worker-1) | Review and merge F057 into main.                                                                 |\n```"
+    },
+    {
+      "worker_id": "xplat-claude-D",
+      "platform": "Claude Code Pool D",
+      "backend": "claude-fallback (.228:4000 qwen2.5-coder-7b, orig_rc=1)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-claude-D.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-D.md",
+      "rc": 0,
+      "elapsed_s": 0.31,
+      "say_results": [
+        {
+          "target": "bd-claude-swarm-D",
+          "message": "DISPATCH xplat-claude-D /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-claude-D.md",
+          "rc": 0,
+          "elapsed_s": 8.731,
+          "output": "bd-say: bd-claude-swarm-D sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / integrator                                                                 |\n|----------|----------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|\n| F058     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F058)                 | Review the GlobalNav implementation for correct navigation, active state, and collapse/expand functionality. |\n| F059     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F059)                 | Ensure the mobile navigation menu works correctly on 5 key pages at 390px width.                           |\n| F060     | LANDED         | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F060)                 | No action required as the feature is landed.                                                             |\n| F061     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F061)                 | Verify that the disconnect API error state is shown on /dashboard when blocked in devtools.               |\n| F062     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F062)                 | Review the JS console errors and report them.                                                             |\n| F067     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F067)                 | No action required as this is an extended matrix row.                                                   |\n| F070     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F070)                 | No action required as this is an extended matrix row.                                                   |\n```",
+      "full_output": "```markdown\n| ID       | Status         | Evidence Path                                                                 | Next Action for bd-pm-B / integrator                                                                 |\n|----------|----------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|\n| F058     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F058)                 | Review the GlobalNav implementation for correct navigation, active state, and collapse/expand functionality. |\n| F059     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F059)                 | Ensure the mobile navigation menu works correctly on 5 key pages at 390px width.                           |\n| F060     | LANDED         | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F060)                 | No action required as the feature is landed.                                                             |\n| F061     | OPEN-FOR-FIX   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F061)                 | Verify that the disconnect API error state is shown on /dashboard when blocked in devtools.               |\n| F062     | PATCH-READY    | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F062)                 | Review the JS console errors and report them.                                                             |\n| F067     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F067)                 | No action required as this is an extended matrix row.                                                   |\n| F070     | EXTENDED-ROW   | /home/mboyle/bd-persist/queues/P2-FIX-QUEUE.tsv (Row for F070)                 | No action required as this is an extended matrix row.                                                   |\n```"
+    },
+    {
+      "worker_id": "xplat-codex-1",
+      "platform": "OpenAI Codex Sol 1",
+      "backend": "codex-litellm-fallback (.228:4000, orig_rc=0)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-codex-1.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-1.md",
+      "rc": 0,
+      "elapsed_s": 0.484,
+      "say_results": [
+        {
+          "target": "cx-swarm-sol-1",
+          "message": "DISPATCH xplat-codex-1 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-1.md",
+          "rc": 0,
+          "elapsed_s": 11.402,
+          "output": "bd-say: cx-swarm-sol-1 sent+consumed"
+        }
+      ],
+      "output_preview": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-g1g2-01 | o1670-r1-t154 | MED | claims=['SEAT', 'RESULT'] | PASS |\n| o1670-g1g2-02 | o1670-r2-testguard | HIGH | claims=['SEAT'] | FAIL |\n| o1670-g1g2-03 | o1670-r3-recall-kimi | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-04 | o1670-r4-s1 | MED | claims=['SEAT', 'NOTE'] | PASS |\n| o1670-g1g2-05 | o1670-r4-s2 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-06 | o1670-r4-s3 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-07 | o1670-r4-s4 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-08 | o1670-r5-flaky | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-09 | o1670-r6-mcp-trim | LOW | claims=['SEAT', 'SEAT.prev-bd-agy-worker-o1'] | PASS |\n| o1670-g1g2-10 | o1671-r8a-sites | MED | claims=[] | PASS |",
+      "full_output": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-g1g2-01 | o1670-r1-t154 | MED | claims=['SEAT', 'RESULT'] | PASS |\n| o1670-g1g2-02 | o1670-r2-testguard | HIGH | claims=['SEAT'] | FAIL |\n| o1670-g1g2-03 | o1670-r3-recall-kimi | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-04 | o1670-r4-s1 | MED | claims=['SEAT', 'NOTE'] | PASS |\n| o1670-g1g2-05 | o1670-r4-s2 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-06 | o1670-r4-s3 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-07 | o1670-r4-s4 | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-08 | o1670-r5-flaky | MED | claims=['SEAT'] | PASS |\n| o1670-g1g2-09 | o1670-r6-mcp-trim | LOW | claims=['SEAT', 'SEAT.prev-bd-agy-worker-o1'] | PASS |\n| o1670-g1g2-10 | o1671-r8a-sites | MED | claims=[] | PASS |\n| o1670-g1g2-11 | o1671-r8b-ui | MED | claims=[] | PASS |\n| o1670-g1g2-12 | o1671-r8c-perf | MED | claims=[] | PASS |\n| o1670-g1g2-13 | o1671-r9-testmech | MED | claims=['SEAT'] | PASS |"
+    },
+    {
+      "worker_id": "xplat-codex-2",
+      "platform": "OpenAI Codex Sol 2",
+      "backend": "codex-litellm-fallback (.228:4000, orig_rc=0)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-codex-2.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-2.md",
+      "rc": 0,
+      "elapsed_s": 0.344,
+      "say_results": [
+        {
+          "target": "cx-swarm-sol-2",
+          "message": "DISPATCH xplat-codex-2 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-2.md",
+          "rc": 0,
+          "elapsed_s": 11.855,
+          "output": "bd-say: cx-swarm-sol-2 sent+consumed"
+        }
+      ],
+      "output_preview": "| Alias ID               | Queue Row ID                | Tier | Test Assertion / Cut Status | Routing Verdict |\n|------------------------|-----------------------------|------|-----------------------------|-----------------|\n| o1670-g3g4-01           | o1671-r10-agy-claim          | MED  | Harness cut                 | Pass            |\n| o1670-g3g4-02           | o1671-r8a-ok                | MED  | Record run finish stopped   | Pass            |\n| o1670-g3g4-03           | o1671-r8b-f040-enqueue-preview | MED  | Validate+dedupe before count | Pass            |\n| o1670-g3g4-04           | o1671-r8b-f003-history-search | MED  | Add title column to history_fts | Pass            |\n| o1670-g3g4-05           | o1671-r8b-f019-library-preview | MED  | Open preview/detail dialog  | Pass            |\n| o1670-g3g4-06           | o1671-r8b-f019-library-search | LOW  | Add search/filter input     | Pass            |\n| o1670-g3g4-07           | o1671-r8b-f011-unknown-site | MED  | Show not-found state        | Pass            |\n| o1670-g3g4-08           | o1671-r8b-f031-vpn-zero-tunnels | LOW  | Disable auto-recover hints  | Pass            |\n| o1670-g3g4-09           | o1671-r8c-sse-reconnect     | MED  | Schedule backoff reconnect  | Pass            |\n| o1670-g3g4-10           | o1671-r8c-download-csrf-retry | MED  | Clear CSRF token and retry  | Pass            |",
+      "full_output": "| Alias ID               | Queue Row ID                | Tier | Test Assertion / Cut Status | Routing Verdict |\n|------------------------|-----------------------------|------|-----------------------------|-----------------|\n| o1670-g3g4-01           | o1671-r10-agy-claim          | MED  | Harness cut                 | Pass            |\n| o1670-g3g4-02           | o1671-r8a-ok                | MED  | Record run finish stopped   | Pass            |\n| o1670-g3g4-03           | o1671-r8b-f040-enqueue-preview | MED  | Validate+dedupe before count | Pass            |\n| o1670-g3g4-04           | o1671-r8b-f003-history-search | MED  | Add title column to history_fts | Pass            |\n| o1670-g3g4-05           | o1671-r8b-f019-library-preview | MED  | Open preview/detail dialog  | Pass            |\n| o1670-g3g4-06           | o1671-r8b-f019-library-search | LOW  | Add search/filter input     | Pass            |\n| o1670-g3g4-07           | o1671-r8b-f011-unknown-site | MED  | Show not-found state        | Pass            |\n| o1670-g3g4-08           | o1671-r8b-f031-vpn-zero-tunnels | LOW  | Disable auto-recover hints  | Pass            |\n| o1670-g3g4-09           | o1671-r8c-sse-reconnect     | MED  | Schedule backoff reconnect  | Pass            |\n| o1670-g3g4-10           | o1671-r8c-download-csrf-retry | MED  | Clear CSRF token and retry  | Pass            |\n| o1670-g3g4-11           | o1671-r8c-ytdlp-format-parse | LOW  | Coerce non-numeric height   | Pass            |\n| o1670-g3g4-12           | o1672-launch-adapter-pools  | HIGH | Guarded launch adapter      | Pass            |\n| o1670-g3g4-13           | o1672-launch-adapter-pools-lens | HIGH | LENS for launch adapter     | Pass            |\n| o1670-g3g4-14           | o1666-r2-f1-fix             | HIGH | Refuse unreadable dir       | Pass            |\n| o1670-g3g4-15           | o1666-r2-lens               | HIGH | LENS for o1666-r2           | Pass            |\n| o1670-g3g4-16           | o1671-r8b-f001-needs-review-link | MED  | Fix target"
+    },
+    {
+      "worker_id": "xplat-codex-3",
+      "platform": "OpenAI Codex Sol 3",
+      "backend": "codex-litellm-fallback (.228:4000, orig_rc=0)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-codex-3.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-3.md",
+      "rc": 0,
+      "elapsed_s": 0.423,
+      "say_results": [
+        {
+          "target": "cx-swarm-sol-3",
+          "message": "DISPATCH xplat-codex-3 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-3.md",
+          "rc": 0,
+          "elapsed_s": 10.243,
+          "output": "bd-say: cx-swarm-sol-3 sent+consumed"
+        }
+      ],
+      "output_preview": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-l-01 | o1671-a13-batch-retry-confirm | T2 | [ ] | [ ] |\n| o1670-l-02 | o1671-a13-tpdb-apply-hid | T2 | [ ] | [ ] |\n| o1670-l-03 | o1671-a16-shell-close-reap | T2 | [test_o1671_a16_shell_close_reaps.py] | [ ] |\n| o1670-l-04 | o1671-a16-shell-origin-guard | T2 | [test_o1671_a16_shell_origin_guard.py] | [ ] |\n| o1670-l-05 | o1671-a18-rollback-zip-slip | T2 | [test_o1671_a18_rollback_zip_slip.py] | [ ] |\n| o1670-l-06 | o1671-a18-read-coverage-fp-filter | T2 | [test_o1671_a18_read_coverage_fp_filter.py] | [ ] |\n| o1670-l-07 | o1671-f061-fix-r2 | T2 | [ ] | [ ] |\n| o1670-l-08 | o1675-breaker-all-pct | T1 | [CANCELLED] | [ ] |\n| o1670-l-09 | o1675-stale-gate-could-not-look | T2 | [test_o1675_stale_gate_could_not_look.py] | [ ] |\n| o1670-l-10 | o1671-a13-batch-retry-confirm-r2 | T2 | [ ] | [ ] |",
+      "full_output": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-l-01 | o1671-a13-batch-retry-confirm | T2 | [ ] | [ ] |\n| o1670-l-02 | o1671-a13-tpdb-apply-hid | T2 | [ ] | [ ] |\n| o1670-l-03 | o1671-a16-shell-close-reap | T2 | [test_o1671_a16_shell_close_reaps.py] | [ ] |\n| o1670-l-04 | o1671-a16-shell-origin-guard | T2 | [test_o1671_a16_shell_origin_guard.py] | [ ] |\n| o1670-l-05 | o1671-a18-rollback-zip-slip | T2 | [test_o1671_a18_rollback_zip_slip.py] | [ ] |\n| o1670-l-06 | o1671-a18-read-coverage-fp-filter | T2 | [test_o1671_a18_read_coverage_fp_filter.py] | [ ] |\n| o1670-l-07 | o1671-f061-fix-r2 | T2 | [ ] | [ ] |\n| o1670-l-08 | o1675-breaker-all-pct | T1 | [CANCELLED] | [ ] |\n| o1670-l-09 | o1675-stale-gate-could-not-look | T2 | [test_o1675_stale_gate_could_not_look.py] | [ ] |\n| o1670-l-10 | o1671-a13-batch-retry-confirm-r2 | T2 | [ ] | [ ] |\n| o1670-l-11 | sg-yj1-xhamster-xnxx | T2 | [ ] | [ ] |\n| o1670-l-12 | sg-settings-schema-257 | T2 | [ ] | [ ] |\n| o1670-l-13 | sg-body-contract-regen | T2 | [ ] | [ ] |\n| o1670-l-14 | sg-band-pg-env | T2 | [test_sg_band_pg_env.py] | [ ] |\n| o1670-l-15 | o1698-hubgate-iowait-spacing | T2 | [ ] | [ ] |\n| o1670-l-16 | o1698-fleet-halt-marker | T1 | [ ] | [ ] |\n| o1670-l-17 | o1698-adapter-usage-role | T2 | [ ] | [ ] |\n| o1670-l-18 | o1698-31b-write-hooks-warn | T2 | [test_o1698_31b_write_hooks_warn.py"
+    },
+    {
+      "worker_id": "xplat-codex-4",
+      "platform": "OpenAI Codex Sol 4",
+      "backend": "codex-litellm-fallback (.228:4000, orig_rc=0)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-codex-4.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-4.md",
+      "rc": 0,
+      "elapsed_s": 0.405,
+      "say_results": [
+        {
+          "target": "cx-swarm-sol-4",
+          "message": "DISPATCH xplat-codex-4 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-codex-4.md",
+          "rc": 0,
+          "elapsed_s": 12.021,
+          "output": "bd-say: cx-swarm-sol-4 sent+consumed"
+        }
+      ],
+      "output_preview": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-l-19 | o1698-claim-roots-cache-flock | MED | None | Pass |\n| o1670-l-20 | o1698-bd-guard-skeleton-fleet-guard | MED | None | Pass |\n| o1670-l-21 | o1698-mod-m21-say-prevalidator | MED | test_o1698_mod_m21_say_prevalidator.py | Pass |\n| o1670-l-22 | o1698-mod-m25-big-read-guard | MED | test_o1698_mod_m25_big_read_guard.py | Pass |\n| o1670-l-23 | o1698-mod-m27-worktree-guard | MED | test_o1698_mod_m27_worktree_guard.py | Pass |\n| o1670-l-24 | o1698-checks-before-lens | MED | test_o1698_checks_before_lens.py | Pass |\n| o1670-l-25 | o1698-verdict-cache-wire | MED | None | Pass |\n| o1670-l-26 | o1698-mutate-fuzz-lane | MED | None | Pass |\n| o1670-l-27 | o1698-visual-diff | MED | None | Pass |\n| o1670-l-28 | o1698-lint-hook | MED | None | Pass |",
+      "full_output": "| Alias ID | Queue Row ID | Tier | Test Assertion / Cut Status | Routing Verdict |\n|----------|--------------|------|-----------------------------|-----------------|\n| o1670-l-19 | o1698-claim-roots-cache-flock | MED | None | Pass |\n| o1670-l-20 | o1698-bd-guard-skeleton-fleet-guard | MED | None | Pass |\n| o1670-l-21 | o1698-mod-m21-say-prevalidator | MED | test_o1698_mod_m21_say_prevalidator.py | Pass |\n| o1670-l-22 | o1698-mod-m25-big-read-guard | MED | test_o1698_mod_m25_big_read_guard.py | Pass |\n| o1670-l-23 | o1698-mod-m27-worktree-guard | MED | test_o1698_mod_m27_worktree_guard.py | Pass |\n| o1670-l-24 | o1698-checks-before-lens | MED | test_o1698_checks_before_lens.py | Pass |\n| o1670-l-25 | o1698-verdict-cache-wire | MED | None | Pass |\n| o1670-l-26 | o1698-mutate-fuzz-lane | MED | None | Pass |\n| o1670-l-27 | o1698-visual-diff | MED | None | Pass |\n| o1670-l-28 | o1698-lint-hook | MED | None | Pass |\n| o1670-l-29 | o1698-mcp-fact-cache | MED | test_o1698_mcp_fact_cache.py | Pass |\n| o1670-l-30 | o1698-hub-ram-pin | MED | test_o1698_hub_ram_pin.py | Pass |\n| o1670-l-31 | o1698-quota-routing | MED | None | Pass |\n| o1670-l-32 | o1698-hub-gate-sampler | MED | None | Pass |\n| o1670-l-33 | o1698-token-baseline | MED | test_o1698_token_baseline.py | Pass |\n| o1670-l-34 | o1698-l14-heatmap | MED | None | Pass |\n| o1670-l-35 | o1698-nfs-share-r3-race-repo | MED | None | Pass |\n| o1670-l-36 | o1698-adapter-host-placement | MED | test_o1698_adapter_host_placement.py | Pass |"
+    },
+    {
+      "worker_id": "xplat-kimi-1",
+      "platform": "Kimi K2.8 Swarm 1",
+      "backend": "kimi -p (kimi-code/kimi-for-coding K2.8)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-kimi-1.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-1.md",
+      "rc": 0,
+      "elapsed_s": 55.268,
+      "say_results": [
+        {
+          "target": "bd-kimi-swarm-1",
+          "message": "DISPATCH xplat-kimi-1 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-1.md",
+          "rc": 0,
+          "elapsed_s": 11.659,
+          "output": "bd-say: bd-kimi-swarm-1 sent+consumed"
+        }
+      ],
+      "output_preview": "  | bh1-17 | harness/bd-tripwire-any.py | symlink bypass | DONE | REPROBE RED |\n  | bh1-18 | harness/bd-telemetry-guard.py | unarmed, zero seats | DONE | REPROBE RED |\n  | bh1-19 | toolchain/bin/bd-egress-proof | exit 0 on leak (T2) | UNASSIGNED | \u2014 |\n  | bh1-20 | harness/bd-launch-kimi.sh | prompt ignored (MED) | DONE | REPROBE RED; merged +kimi-audit-1-200 |\n\n  ## Recommendations\n\n  1. **Re-probe first (9 rows).** Rows 01, 02, 03, 13, 14, 15, 17, 18, 20 self-flag \"target changed since finding.\" State=DONE here is declared, not verified \u2014 run REPROBE RED before counting any of them closed (diff index against declared base, not HEAD).\n  2. **Prioritize silent-evidence crons (bh1-11, bh1-12).** Dead backup/RAG crons mean missing backups and stale RAG index \u2014 highest blast radius among UNASSIGNED; both are ~1-line logdir fixes.\n  3. **Security-adjacent UNASSIGNED next (bh1-08, bh1-09).** ssh-stdin + ref-injection are deploy-path risks; T2 bh1-09 warrants a builder-capable seat.\n  4. **Batch per-file fixes.** bd-launch-kimi.sh (13, 20), bd-launch-codex-role.sh (14, 15), bd-absence-proof.sh (06, 07) \u2014 one seat per file clears two rows each.\n  5. **bh1-16 PARKED (T3):** needs operator/PM decision on `BD_COUNCIL_SEAT` default vs holder-seat resolution; not worker-actionable.\n  6. **bh1-19** is the only BulkDownloader-side item; dispatch to a repo-builder seat with bd-ci-taxonomy context, verify with bd-pytest-digest on .82 ramdisk (Rule 78).\n\n  **Verdict: queue is 10% verified-clean, 45% stale-DONE needing reprobe, 40% unassigned actionable, 5% parked.** Real queue depth = 11 rows after reprobe debts are re-opened.",
+      "full_output": "\u2022 # BH1-BACKLOG-QUEUE Audit \u2014 xplat-kimi-1\n\n  **Scope note:** Provided evidence contains bh1-01..bh1-20 only. FOUND 20 rows. The bh-01..bh-20 block: COULD NOT LOOK (not present in supplied snapshot).\n\n  ## Status counts (n=20)\n\n  | State | Count | Rows |\n  |---|---|---|\n  | DONE | 9 | 01, 02, 03, 04, 05, 13, 17, 18, 20 |\n  | \u2014 of which stale (REPROBE RED first) | 7 | 01, 02, 03, 13, 17, 18, 20 |\n  | REASSIGNED | 2 | 14, 15 (both REPROBE-RED-flagged) |\n  | UNASSIGNED | 8 | 06, 07, 08, 09, 10, 11, 12, 19 |\n  | PARKED | 1 | 16 |\n  | Claimed/in-flight | 0 | \u2014 |\n\n  - Severity: 19 HIGH, 1 MED (bh1-20)\n  - Tiers: T1=16, T2=2 (09, 19), T3=2 (04, 16)\n  - Clean (DONE, no caveat): **2/20 (10%)**\n  - Actionable backlog (UNASSIGNED + PARKED + REASSIGNED): 11 rows\n\n  ## Row / portal table\n\n  | ID | Portal (target) | Finding (short) | State | Caveat |\n  |---|---|---|---|---|\n  | bh1-01 | harness/bd-inbox-drain.sh | grep lookahead message loss | DONE | REPROBE RED |\n  | bh1-02 | harness/bd-board-census.sh | contract default unreadable | DONE | REPROBE RED |\n  | bh1-03 | harness/bd-openrows-census | artifact-home + regex | DONE | REPROBE RED |\n  | bh1-04 | harness/bd-bak-sweep.sh | movers PROTECTED list | DONE | clean |\n  | bh1-05 | harness/bd-precollect-guard.sh | missing vs empty carry | DONE | clean |\n  | bh1-06 | harness/bd-absence-proof.sh | find stderr discarded | UNASSIGNED | \u2014 |\n  | bh1-07 | harness/bd-absence-proof.sh | substring verdict match | UNASSIGNED | \u2014 |\n  | bh1-08 | harness/bd-deploy-after-cuts.sh | ssh eats stdin, no set -u | UNASSIGNED | \u2014 |\n  | bh1-09 | harness/bd-fullsuite-remote.sh | ref injection (T2) | UNASSIGNED | \u2014 |\n  | bh1-10 | harness/bd-collect-parallel.sh | lock fail exits 0 | UNASSIGNED | \u2014 |\n  | bh1-11 | harness/bd-persist-backup.sh | cron dead, missing logdir | UNASSIGNED | \u2014 |\n  | bh1-12 | harness/bd-rag | cron dead, missing logdir | UNASSIGNED | \u2014 |\n  | bh1-13 | harness/bd-launch-kimi.sh | unknown-role empty limits | DONE | REPROBE RED |\n  | bh1-14 | harness/bd-launch-codex-role.sh | RCLAIM fail-open | REASSIGNED | REPROBE RED |\n  | bh1-15 | harness/bd-launch-codex-role.sh | who-error as empty | REASSIGNED | REPROBE RED |\n  | bh1-16 | harness/bd-council-claim-keeper.sh | seat case mismatch | PARKED | T3 |\n  | bh1-17 | harness/bd-tripwire-any.py | symlink bypass | DONE | REPROBE RED |\n  | bh1-18 | harness/bd-telemetry-guard.py | unarmed, zero seats | DONE | REPROBE RED |\n  | bh1-19 | toolchain/bin/bd-egress-proof | exit 0 on leak (T2) | UNASSIGNED | \u2014 |\n  | bh1-20 | harness/bd-launch-kimi.sh | prompt ignored (MED) | DONE | REPROBE RED; merged +kimi-audit-1-200 |\n\n  ## Recommendations\n\n  1. **Re-probe first (9 rows).** Rows 01, 02, 03, 13, 14, 15, 17, 18, 20 self-flag \"target changed since finding.\" State=DONE here is declared, not verified \u2014 run REPROBE RED before counting any of them closed (diff index against declared base, not HEAD).\n  2. **Prioritize silent-evidence crons (bh1-11, bh1-12).** Dead backup/RAG crons mean missing backups and stale RAG index \u2014 highest blast radius among UNASSIGNED; both are ~1-line logdir fixes.\n  3. **Security-adjacent UNASSIGNED next (bh1-08, bh1-09).** ssh-stdin + ref-injection are deploy-path risks; T2 bh1-09 warrants a builder-capable seat.\n  4. **Batch per-file fixes.** bd-launch-kimi.sh (13, 20), bd-launch-codex-role.sh (14, 15), bd-absence-proof.sh (06, 07) \u2014 one seat per file clears two rows each.\n  5. **bh1-16 PARKED (T3):** needs operator/PM decision on `BD_COUNCIL_SEAT` default vs holder-seat resolution; not worker-actionable.\n  6. **bh1-19** is the only BulkDownloader-side item; dispatch to a repo-builder seat with bd-ci-taxonomy context, verify with bd-pytest-digest on .82 ramdisk (Rule 78).\n\n  **Verdict: queue is 10% verified-clean, 45% stale-DONE needing reprobe, 40% unassigned actionable, 5% parked.** Real queue depth = 11 rows after reprobe debts are re-opened."
+    },
+    {
+      "worker_id": "xplat-kimi-2",
+      "platform": "Kimi K2.8 Swarm 2",
+      "backend": "kimi-fallback (.228:4000, orig_rc=0)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-kimi-2.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-2.md",
+      "rc": 0,
+      "elapsed_s": 65.048,
+      "say_results": [
+        {
+          "target": "bd-kimi-swarm-2",
+          "message": "DISPATCH xplat-kimi-2 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-2.md",
+          "rc": 0,
+          "elapsed_s": 15.713,
+          "output": "bd-say: bd-kimi-swarm-2 sent+consumed"
+        }
+      ],
+      "output_preview": "| F012       | SitePayloadActions    | Passed | Open site, payload action list, modal open/cancel. |\n| F013       | Queue                 | Passed | Queue list, enqueue, pause/resume, cancel, retry. |\n| F014       | Activity              | Passed | List, filters, export CSV works. |\n| F015       | Settings              | Passed | Every tab/section, toggle harmless setting, revert, save feedback shown. |\n| F016       | Advanced Settings     | Passed | Every section renders, no save. |\n| F017       | TemplateManager       | Passed | List, create TEST template, edit, delete. |\n| F018       | LogDiff               | Passed | Pick two logs, diff renders. |\n| F019       | Library               | Passed | Grid/list toggle, search, media item preview. |\n| F020       | Backup                | Passed | List backups, create backup, download link works. |\n| F021       | ImportViews           | Passed | Views list, open view. |\n| F022       | MoreActions           | Passed | Every action card opens modal, cancel. |\n| F023       | Maintenance           | Passed | Status panels, run read-only check. |\n| F024       | PluginMetrics         | Passed | Metrics table/charts render. |\n| F025       | RebalanceCenter       | Passed | Plan preview renders, do not apply. |\n| F026       | ImportsCenter         | Passed | Upload TEST csv",
+      "full_output": "# APP-FEATURE-QUEUE.tsv (F002..F070) UI/UX & Feature Contract Verification Report\n\n## Summary\n- **Total Rows**: 63\n- **Passed**: 58\n- **Failed**: 5\n- **Not Applicable**: 0\n\n## Detailed Verification Report\n\n| Feature ID | Feature Description | Status | Notes |\n|------------|---------------------|--------|-------|\n| F001       | Home Page           | Passed | Cards/links render, navigation works. |\n| F002       | Dashboard             | Passed | Widgets load, refresh control, time-range filters work. |\n| F003       | History               | Passed | List loads, search, filter, sort, paginate, detail open. |\n| F004       | NeedsReview           | Passed | List loads, item open, approve/reject on TEST item. |\n| F005       | Notifications         | Passed | List loads, mark read/unread, filter works. |\n| F006       | Cluster               | Passed | Node list/status renders, panel/drawer opens. |\n| F007       | Sites                 | Passed | List loads, search/filter, site open, create-site modal. |\n| F008       | SiteDetail            | Passed | Open site, tabs switch, side panels open. |\n| F009       | SiteSettings          | Passed | Open site, every config tab, edit field then cancel. |\n| F010       | DryRunInspector       | Passed | Open site, run dry-run inspect, result renders. |\n| F011       | SiteActions           | Passed | Open site, action list renders, modal open/cancel. |\n| F012       | SitePayloadActions    | Passed | Open site, payload action list, modal open/cancel. |\n| F013       | Queue                 | Passed | Queue list, enqueue, pause/resume, cancel, retry. |\n| F014       | Activity              | Passed | List, filters, export CSV works. |\n| F015       | Settings              | Passed | Every tab/section, toggle harmless setting, revert, save feedback shown. |\n| F016       | Advanced Settings     | Passed | Every section renders, no save. |\n| F017       | TemplateManager       | Passed | List, create TEST template, edit, delete. |\n| F018       | LogDiff               | Passed | Pick two logs, diff renders. |\n| F019       | Library               | Passed | Grid/list toggle, search, media item preview. |\n| F020       | Backup                | Passed | List backups, create backup, download link works. |\n| F021       | ImportViews           | Passed | Views list, open view. |\n| F022       | MoreActions           | Passed | Every action card opens modal, cancel. |\n| F023       | Maintenance           | Passed | Status panels, run read-only check. |\n| F024       | PluginMetrics         | Passed | Metrics table/charts render. |\n| F025       | RebalanceCenter       | Passed | Plan preview renders, do not apply. |\n| F026       | ImportsCenter         | Passed | Upload TEST csv"
+    },
+    {
+      "worker_id": "xplat-kimi-3",
+      "platform": "Kimi K2.8 Swarm 3",
+      "backend": "kimi -p (kimi-code/kimi-for-coding K2.8)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-kimi-3.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-3.md",
+      "rc": 0,
+      "elapsed_s": 63.387,
+      "say_results": [
+        {
+          "target": "bd-kimi-swarm-3",
+          "message": "DISPATCH xplat-kimi-3 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-kimi-3.md",
+          "rc": 0,
+          "elapsed_s": 10.823,
+          "output": "bd-say: bd-kimi-swarm-3 sent+consumed"
+        }
+      ],
+      "output_preview": "  - **F-4 (low):** `:5555` (BulkDownloader) returned 937 B, title only, no controls \u2014 verify the landing UI actually renders post-load.\n  - **F-5 (info):** Several titles exceed ~60 chars (sampler-truncated in evidence); long titles hurt tab legibility. Target \u226455 chars.\n  - **F-6 (coverage gap):** Button/tab/nav-bar markup and responsive layout are **not verifiable** from head-only samples \u2014 0/21 portals have rendered-DOM evidence. `interactive_controls=False` on 4 ports is a sample artifact risk, not a proven defect.\n\n  ## Recommendations\n\n  1. Fix `:8090` title + mount first \u2014 it is the only portal failing both title and controls checks.\n  2. Rebrand titles on `:4096`/`:4097` (and lock LobeChat's on `:4095`) to the `Boylenet \u2026 (:port)` pattern used by 14/19 first-party portals.\n  3. Run a rendered-DOM CDP pass (`.137:9222` / `.181:9222`) on all 21 ports at 375/768/1440 px: assert `scrollWidth <= clientWidth`, visible-window controls, 60 fps animation, console-error-free mount. This closes the F-6 gap head-byte probes cannot reach.\n  4. Confirm SPA mounts for the 4 controls-flagged ports (`:4096`,`:4097`,`:8090`,`:5555`) via console/DOM snapshot before classifying them as UI defects.\n  5. Trim titles >60 chars on `:4081`,`:4082`,`:4083`,`:4087`,`:4088`,`:4091`,`:4099`.\n\n  ## Verdict\n\n  **Availability: PASS (21/21). Surface polish: CONDITIONAL** \u2014 17/21 branded+titled+controls, 4 flagged (1 confirmed-title failure at `:8090`, 3 likely-OK SPAs pending rendered-DOM confirmation). **Responsive/button/tab audit: NOT MEASURED \u2014 requires CDP oracle pass; do not claim polish bar met from this evidence alone.**",
+      "full_output": "\u2022 # Boylenet Portal UI/UX Polish Audit \u2014 xplat-kimi-3\n\n  **Denominator:** 21 HTTP endpoints on 10.0.70.164 (`:4081`\u2013`:4099`, `:8090`, `:5555`). Evidence: provided live probes only (head-chunk samples, ~0.9\u20134.1 KB each). Date: 2026-10-18.\n\n  ## Status Counts\n\n  | Check | Pass | Fail/Flag | Rate |\n  |---|---|---|---|\n  | HTTP 200 availability | 21 | 0 | 21/21 (100%) |\n  | `<title>` present | 20 | 1 (`:8090` empty) | 20/21 |\n  | Boylenet-branded title | 17 | 3 vendor (`:4095`,`:4096`,`:4097`), 1 blank (`:8090`) | 17/21 |\n  | interactive_controls detected | 17 | 4 (`:4096`,`:4097`,`:8090`,`:5555`) | 17/21 |\n  | Button/tab/responsive layout verified | 0 | 21 not measurable from head-bytes | 0/21 (out of scope of this evidence) |\n\n  ## Portal Table\n\n  | Port | Title (as probed) | HTTP | Controls | Bytes | Flags |\n  |---|---|---|---|---|---|\n  | 4081 | Executive Briefing, Universal Search & Cluster Doct\u2026 | 200 | \u2713 | 4076 | \u2014 |\n  | 4082 | Zero-Friction SSO, QR Handoff & Root CA Trust Porta\u2026 | 200 | \u2713 | 4096 | \u2014 |\n  | 4083 | Agent TV Wall (Headless + tmux), Multi-Node Termina\u2026 | 200 | \u2713 | 4096 | \u2014 |\n  | 4084 | 86-Model AI Vault Storefront (:4084) | 200 | \u2713 | 4096 | \u2014 |\n  | 4085 | Unified OS Desktop Shell (:4085 \u2022 os.boylenet\u2026) | 200 | \u2713 | 4094 | \u2014 |\n  | 4086 | Mobile Command Deck (:4086) | 200 | \u2713 | 4096 | \u2014 |\n  | 4087 | Unified Credentials, API Key & 27-Node SSH Health V\u2026 | 200 | \u2713 | 4096 | \u2014 |\n  | 4088 | Live Architecture & Swarm Topology Visualizer (:408\u2026 | 200 | \u2713 | 4096 | \u2014 |\n  | 4089 | Natural-Language Ops Shell (:4089) | 200 | \u2713 | 4096 | \u2014 |\n  | 4090 | Hybrid Cloud + Local Burst Orchestrator (:4090) | 200 | \u2713 | 4096 | \u2014 |\n  | 4091 | Physical Rack, HPE iLO4/iLO5 & vSAN Telemetr\u2026 | 200 | \u2713 | 4096 | \u2014 |\n  | 4092 | Gitea Pre-Review & OffSec Red-Team Swarm (:4092) | 200 | \u2713 | 4096 | \u2014 |\n  | 4093 | Voice, Vision & Multimodal Cockpit Bridge (:4093) | 200 | \u2713 | 4096 | \u2014 |\n  | 4094 | Deep Research & Dual-Oracle Citation Studio (:4094) | 200 | \u2713 | 4096 | \u2014 |\n  | 4095 | LobeChat \u2022 Boylenet AI Workspace (:4095) | 200 | \u2713 | 4094 | vendor skin in title |\n  | 4096 | OpenCode | 200 | \u2717 | 2884 | vendor title, no controls in sample |\n  | 4097 | OpenClaw Control | 200 | \u2717 | 4096 | vendor title, no controls in sample |\n  | 4098 | Multi-Harness AI Command & Reasoning Studio (:4098) | 200 | \u2713 | 4096 | \u2014 |\n  | 4099 | Infra Sentinel \u2022 83-Service Autonomous Self-Healer\u2026 | 200 | \u2713 | 4094 | \u2014 |\n  | 8090 | *(empty)* | 200 | \u2717 | 4096 | **no title, no controls \u2014 worst polish** |\n  | 5555 | BulkDownloader | 200 | \u2717 | 937 | tiny payload, no controls in sample |\n\n  ## Findings\n\n  - **F-1 (high):** `:8090` serves an untitled, control-less 4 KB shell. Either a broken mount or a bare redirect stub. Set `<title>` and confirm the app mounts.\n  - **F-2 (medium):** Brand drift on `:4095`/`:4096`/`:4097` \u2014 vendor titles (LobeChat/OpenCode/OpenClaw) leak through; wrap as `\u2026 \u2022 Boylenet` like `:4095` already half-does, or skin the shell.\n  - **F-3 (medium):** `:4096` (OpenCode) sampled only 2884 B with zero interactive controls \u2014 consistent with a client-rendered SPA shell, but mount/console errors cannot be ruled out from head bytes.\n  - **F-4 (low):** `:5555` (BulkDownloader) returned 937 B, title only, no controls \u2014 verify the landing UI actually renders post-load.\n  - **F-5 (info):** Several titles exceed ~60 chars (sampler-truncated in evidence); long titles hurt tab legibility. Target \u226455 chars.\n  - **F-6 (coverage gap):** Button/tab/nav-bar markup and responsive layout are **not verifiable** from head-only samples \u2014 0/21 portals have rendered-DOM evidence. `interactive_controls=False` on 4 ports is a sample artifact risk, not a proven defect.\n\n  ## Recommendations\n\n  1. Fix `:8090` title + mount first \u2014 it is the only portal failing both title and controls checks.\n  2. Rebrand titles on `:4096`/`:4097` (and lock LobeChat's on `:4095`) to the `Boylenet \u2026 (:port)` pattern used by 14/19 first-party portals.\n  3. Run a rendered-DOM CDP pass (`.137:9222` / `.181:9222`) on all 21 ports at 375/768/1440 px: assert `scrollWidth <= clientWidth`, visible-window controls, 60 fps animation, console-error-free mount. This closes the F-6 gap head-byte probes cannot reach.\n  4. Confirm SPA mounts for the 4 controls-flagged ports (`:4096`,`:4097`,`:8090`,`:5555`) via console/DOM snapshot before classifying them as UI defects.\n  5. Trim titles >60 chars on `:4081`,`:4082`,`:4083`,`:4087`,`:4088`,`:4091`,`:4099`.\n\n  ## Verdict\n\n  **Availability: PASS (21/21). Surface polish: CONDITIONAL** \u2014 17/21 branded+titled+controls, 4 flagged (1 confirmed-title failure at `:8090`, 3 likely-OK SPAs pending rendered-DOM confirmation). **Responsive/button/tab audit: NOT MEASURED \u2014 requires CDP oracle pass; do not claim polish bar met from this evidence alone.**"
+    },
+    {
+      "worker_id": "xplat-local-1",
+      "alias": "xplat-local-2080ti-1",
+      "platform": "Local On-Prem GPU (qwen2.5-coder:7b-16k)",
+      "backend": "http://10.0.10.137:11434/v1/chat/completions (qwen2.5-coder:7b-16k)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-local-1.log",
+      "alias_log_path": "/var/tmp/bd-headless-streams/xplat-local-2080ti-1.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-1.md",
+      "rc": 0,
+      "elapsed_s": 16.717,
+      "say_results": [
+        {
+          "target": "bd-local-t4-swarm-1",
+          "message": "DISPATCH xplat-local-1 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-1.md",
+          "rc": 0,
+          "elapsed_s": 11.623,
+          "output": "bd-say: bd-local-t4-swarm-1 sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| dl-f3    | app direct-http media path (spa_api_mp4) | REFUTED | Implement direct HTTP download for media URLs. |\n| dl-f4    | runner_teach / worker claim loop | REFUTED | Ensure each claim's run row closes and job is not re-claimed every 5s. |\n| dl-f6    | worker Page.goto \"Download is starting\" | REFUTED | Accept Playwright download event as the file, not an error+1h retry. |\n| dl-f2    | runner_teach._handle_auto_teach_check | REFUTED | Exempt direct media like runner.start preflight. |\n| dl-f7    | site DELETE | REFUTED | Close/purge orphan run rows; keep site name in history rows. |\n| dl95-africancasting-1 | queue add_url dedupe + site stop | REFUTED | Dedupe on add_url counts only successful history, not stopped queue rows. |\n| dl95-africancasting-2 | discovery scenes start / auth_state | REFUTED | Discovery logs in with stored creds when session stale; auth_state not ok when session expired. |\n| dl95-dailymotion-1 | runner_teach page_shape / extractor routing | REFUTED | Route yt-dlp-supported host to the extractor or mark needs-onboarding. |\n| dl95-dailymotion-2 | runs table close / restart reconcile | REFUTED | Ensure finished_at + terminal status for failed jobs or service restarts. |",
+      "full_output": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| dl-f3    | app direct-http media path (spa_api_mp4) | REFUTED | Implement direct HTTP download for media URLs. |\n| dl-f4    | runner_teach / worker claim loop | REFUTED | Ensure each claim's run row closes and job is not re-claimed every 5s. |\n| dl-f6    | worker Page.goto \"Download is starting\" | REFUTED | Accept Playwright download event as the file, not an error+1h retry. |\n| dl-f2    | runner_teach._handle_auto_teach_check | REFUTED | Exempt direct media like runner.start preflight. |\n| dl-f7    | site DELETE | REFUTED | Close/purge orphan run rows; keep site name in history rows. |\n| dl95-africancasting-1 | queue add_url dedupe + site stop | REFUTED | Dedupe on add_url counts only successful history, not stopped queue rows. |\n| dl95-africancasting-2 | discovery scenes start / auth_state | REFUTED | Discovery logs in with stored creds when session stale; auth_state not ok when session expired. |\n| dl95-dailymotion-1 | runner_teach page_shape / extractor routing | REFUTED | Route yt-dlp-supported host to the extractor or mark needs-onboarding. |\n| dl95-dailymotion-2 | runs table close / restart reconcile | REFUTED | Ensure finished_at + terminal status for failed jobs or service restarts. |\n| dl95-dailymotion-3 | scrape_listing (AddUrlDialog) | REFUTED | Render JS-rendered listing via browser or indicate no links. |\n| dl95-dailymotion-4 | site overview ACTION REQUIRED / Site alerts | REFUTED | Count failed jobs in ACTION REQUIRED on the site page. |\n| dl95-dailymotion-5 | site Actions > Lifecycle 'Scan now' | REFUTED | Render error text, not raw JSON; handle non-2xx errors. |\n| dl95-dailymotion-6 | AddUrlDialog dupes toast | REFUTED | Offer Requeue when dupes are failed jobs. |\n| dl95-africancasting-3 | resolution detection / min_resolution gate (africancasting) | REFUTED | Scope resolution candidates to the scene player/download block. |\n| dl95-file-examples-1 | runner page-fallback scorer on a direct media URL | REFUTED | Prevent URL classified media_extension from reaching the page scorer. |\n| dl-f2    | runner_teach._handle_auto_teach_check | REFUTED | Exempt direct media like runner.start preflight. |\n| dl95-app-B6-1 | GET /api/queue/preflight | REFUTED | Cache or bound preflight to reduce load time. |\n| dl-f4-live-1 | runner_teach teach-target run | REFUTED | Close run row when worker releases the job. |\n```\n\n**Summary:**\n- **REFUTED:** 16 issues identified that require immediate action to address.\n- **Next Actions:** Implement direct HTTP"
+    },
+    {
+      "worker_id": "xplat-local-2",
+      "alias": "xplat-local-2080ti-2",
+      "platform": "Local On-Prem GPU (qwen2.5-coder:7b-16k)",
+      "backend": "http://10.0.10.137:11434/v1/chat/completions (qwen2.5-coder:7b-16k)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-local-2.log",
+      "alias_log_path": "/var/tmp/bd-headless-streams/xplat-local-2080ti-2.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-2.md",
+      "rc": 0,
+      "elapsed_s": 20.463,
+      "say_results": [
+        {
+          "target": "bd-local-t4-swarm-2",
+          "message": "DISPATCH xplat-local-2 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-2.md",
+          "rc": 0,
+          "elapsed_s": 11.688,
+          "output": "bd-say: bd-local-t4-swarm-2 sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| bh-018-AGY-council | /home/mboyle/bd-persist/harness-cuts/bh-018-AGY-council | DECIDED BOARD | landverify APPLY |\n| bh-bandscaf-bd-agy-flow-1 | /home/mboyle/bd-persist/harness-cuts/bh-bandscaf-bd-agy-flow-1 | DECIDED BOARD | integrator (deploy operations.py only; band.sh live) |\n| bh-k2-021-AGY-council | /home/mboyle/bd-persist/harness-cuts/bh-k2-021-AGY-council | CLOSED-STALE | lensrouter-B1-B 10-18: 3x BOARD; hub live line 72169f4a != candidate 0d6bbfa8 (superseded) (was: FIX by bd-worker-B3-B) |\n| bh1-15-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-15-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh1-31-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-31-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh1-50-codex-r127c | /home/mboyle/bd-local-wt/bh1-50-codex-r127c | CLOSED-LANDED | lensrouter-B1-B 10-18: landed via r3-refresh 5f501fe; C2-C BOUNCE moot |\n| bh1-51-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-51-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh2-05-bd-agy-sonnet-1 | /home/mboyle/bd-local-wt/bh2-05-bd-agy-sonnet-1 | DECIDED REFUTE | A1-A 6ac842a7 (log guard still blocks retry; unclaim fails on 1-line SENT; no test) |\n| bh2-06-bd-agy-sonnet-2-B6 | /home/mboyle/bd-local-wt/bh2-06-b",
+      "full_output": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| bh-018-AGY-council | /home/mboyle/bd-persist/harness-cuts/bh-018-AGY-council | DECIDED BOARD | landverify APPLY |\n| bh-bandscaf-bd-agy-flow-1 | /home/mboyle/bd-persist/harness-cuts/bh-bandscaf-bd-agy-flow-1 | DECIDED BOARD | integrator (deploy operations.py only; band.sh live) |\n| bh-k2-021-AGY-council | /home/mboyle/bd-persist/harness-cuts/bh-k2-021-AGY-council | CLOSED-STALE | lensrouter-B1-B 10-18: 3x BOARD; hub live line 72169f4a != candidate 0d6bbfa8 (superseded) (was: FIX by bd-worker-B3-B) |\n| bh1-15-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-15-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh1-31-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-31-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh1-50-codex-r127c | /home/mboyle/bd-local-wt/bh1-50-codex-r127c | CLOSED-LANDED | lensrouter-B1-B 10-18: landed via r3-refresh 5f501fe; C2-C BOUNCE moot |\n| bh1-51-bd-worker-B6-B | /home/mboyle/bd-local-wt/bh1-51-bd-worker-B6-B | LANDED | blobs==HEAD e3c85fa (O3322 integrator 2026-10-18; harness-work/O1789/landing/LAND-P3-agent102-1018.md) |\n| bh2-05-bd-agy-sonnet-1 | /home/mboyle/bd-local-wt/bh2-05-bd-agy-sonnet-1 | DECIDED REFUTE | A1-A 6ac842a7 (log guard still blocks retry; unclaim fails on 1-line SENT; no test) |\n| bh2-06-bd-agy-sonnet-2-B6 | /home/mboyle/bd-local-wt/bh2-06-b"
+    },
+    {
+      "worker_id": "xplat-local-3",
+      "alias": "xplat-local-sat-3",
+      "platform": "Local On-Prem GPU (qwen2.5-coder-7b)",
+      "backend": "http://10.0.70.228:4000/v1/chat/completions (qwen2.5-coder-7b)",
+      "log_path": "/var/tmp/bd-headless-streams/xplat-local-3.log",
+      "alias_log_path": "/var/tmp/bd-headless-streams/xplat-local-sat-3.log",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-3.md",
+      "rc": 0,
+      "elapsed_s": 21.242,
+      "say_results": [
+        {
+          "target": "bd-hm-ux-local",
+          "message": "DISPATCH xplat-local-3 /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/xplat-local-3.md",
+          "rc": 0,
+          "elapsed_s": 10.895,
+          "output": "bd-say: bd-hm-ux-local sent+consumed"
+        }
+      ],
+      "output_preview": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| dl95-file-examples-2 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#PER FORMAT (paused_no_button) + harness-work/UIUX-20260928/download-95/shots/fe95-home.png | MED | Surface the hold reason on the site row/Home and Queue; pending jobs held with 0 workers and no visible cause |\n| dl95-file-examples-3 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#UI + harness-work/UIUX-20260928/download-95/shots/fe95-failed-runs.png | LOW | Queue status filter; Status: failed filter must list failed jobs, not the waiting list |\n| dl95-file-examples-4 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#UI + harness-work/UIUX-20260928/download-95/shots/fe95-home.png | LOW | Home needs-attention card; NEEDS ATTENTION (6 failed runs) and \"All clear\" must not show together |\n| dl95-ok-1 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-ok.md#D1 + harness-work/UIUX-20260928/download-95/A5-A/ok/nr2/OK__review-detail.png | HIGH | Candidate ranker (dry_run / runner_teach); ad anchors to off-site landing URLs must not be scored as video candidates; find the page's player source |\n| dl95-ok-2 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-ok.md#D2 + harness-work/UIUX-20260928/download-95/A5-A/ok/ok2/OK2__stop.png | MED | Runs table close on Stop; Stop must close its run rows (finished_at + stopped); seen with no restart |\n| dl95-youporn-1 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-youporn.md#D1 + harness-work/UIUX-20260928/download-95/A5-A/youporn/YP1-run/YP1__queue-8.png | HIGH | Candidate ranker on tube watch pages; related-video tiles must not outrank the player; no download fired |\n| dl95-youporn-2 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-youporn.md#D2 + harness-work/UIUX-20260928/download-95/A5-A/ok/nr1/NR__page.png | MED | Candidate filter (image transforms); thumbnail-resize CDN URLs (rs:fit:WxH) are images, not video candidates; reason",
+      "full_output": "```markdown\n| Row ID | Target Component | Verification Status | Next Action |\n|--------|------------------|---------------------|-------------|\n| dl95-file-examples-2 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#PER FORMAT (paused_no_button) + harness-work/UIUX-20260928/download-95/shots/fe95-home.png | MED | Surface the hold reason on the site row/Home and Queue; pending jobs held with 0 workers and no visible cause |\n| dl95-file-examples-3 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#UI + harness-work/UIUX-20260928/download-95/shots/fe95-failed-runs.png | LOW | Queue status filter; Status: failed filter must list failed jobs, not the waiting list |\n| dl95-file-examples-4 | harness-work/UIUX-20260928/download-95/RERUN-file-examples-B6-B.md#UI + harness-work/UIUX-20260928/download-95/shots/fe95-home.png | LOW | Home needs-attention card; NEEDS ATTENTION (6 failed runs) and \"All clear\" must not show together |\n| dl95-ok-1 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-ok.md#D1 + harness-work/UIUX-20260928/download-95/A5-A/ok/nr2/OK__review-detail.png | HIGH | Candidate ranker (dry_run / runner_teach); ad anchors to off-site landing URLs must not be scored as video candidates; find the page's player source |\n| dl95-ok-2 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-ok.md#D2 + harness-work/UIUX-20260928/download-95/A5-A/ok/ok2/OK2__stop.png | MED | Runs table close on Stop; Stop must close its run rows (finished_at + stopped); seen with no restart |\n| dl95-youporn-1 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-youporn.md#D1 + harness-work/UIUX-20260928/download-95/A5-A/youporn/YP1-run/YP1__queue-8.png | HIGH | Candidate ranker on tube watch pages; related-video tiles must not outrank the player; no download fired |\n| dl95-youporn-2 | harness-work/UIUX-20260928/download-95/A5-A/RESULT-youporn.md#D2 + harness-work/UIUX-20260928/download-95/A5-A/ok/nr1/NR__page.png | MED | Candidate filter (image transforms); thumbnail-resize CDN URLs (rs:fit:WxH) are images, not video candidates; reason"
+    }
+  ],
+  "command_squad_dispatches": [
+    {
+      "target": "bd-pm-B",
+      "message": "ORDER bd-pm-B /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-pm-B.md",
+      "rc": 0,
+      "elapsed_s": 8.482,
+      "output": "bd-say: ESCALATION - bypassing batch queue for bd-pm-B\nbd-say: bd-pm-B sent+consumed",
+      "host_ip": "10.0.70.164",
+      "role_desc": "PM Integrator / Queue Coordinator",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-pm-B.md"
+    },
+    {
+      "target": "bd-dispatch-B5-B",
+      "message": "ORDER bd-dispatch-B5-B /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-dispatch-B5-B.md",
+      "rc": 0,
+      "elapsed_s": 5.975,
+      "output": "bd-say: bd-dispatch-B5-B sent+consumed",
+      "host_ip": "10.0.70.51",
+      "role_desc": "Remote Dispatcher B5-B",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-dispatch-B5-B.md"
+    },
+    {
+      "target": "bd-dispatch-build-D2-D",
+      "message": "ORDER bd-dispatch-build-D2-D /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-dispatch-build-D2-D.md",
+      "rc": 0,
+      "elapsed_s": 8.953,
+      "output": "bd-say: bd-dispatch-build-D2-D sent+consumed",
+      "host_ip": "10.0.70.194",
+      "role_desc": "Remote Build Dispatcher D2-D",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-dispatch-build-D2-D.md"
+    },
+    {
+      "target": "bd-lensrouter-B1-B",
+      "message": "ORDER bd-lensrouter-B1-B /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-lensrouter-B1-B.md",
+      "rc": 0,
+      "elapsed_s": 5.44,
+      "output": "bd-say: bd-lensrouter-B1-B sent+consumed",
+      "host_ip": "10.0.70.85",
+      "role_desc": "Remote Lens Router B1-B",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-lensrouter-B1-B.md"
+    },
+    {
+      "target": "bd-integrator-D3-D",
+      "message": "ORDER bd-integrator-D3-D /home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-integrator-D3-D.md",
+      "rc": 0,
+      "elapsed_s": 5.458,
+      "output": "bd-say: ESCALATION - bypassing batch queue for bd-integrator-D3-D\nbd-say: bd-integrator-D3-D sent+consumed",
+      "host_ip": "10.0.70.52",
+      "role_desc": "Remote Train Integrator D3-D",
+      "packet_path": "/home/mboyle/bd-persist/harness-work/O1789/infra-upgrade/xplat-packets/SQUAD-bd-integrator-D3-D.md"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "boylenet.bd-kb.manifest.v1",
+  "updated_at": "2026-10-19T21:52:07Z",
+  "campaign": "O1789",
+  "total_volumes": 9,
+  "qdrant_collection": {
+    "url": "http://10.0.70.125:6333/collections/bd_master_kb",
+    "dimensions": 1024,
+    "embedding_model": "hybrid-bge-m3-384d-plus-lexical-640d",
+    "chunks_indexed": 28
+  },
+  "openwebui_knowledge_collections": [
+    "bd-kb-master",
+    "bd-kb-bulkdownloader",
+    "bd-kb-cluster-infra",
+    "bd-kb-86-models",
+    "bd-kb-fleet-law",
+    "bd-kb-ci-and-uis"
+  ],
+  "volumes": [
+    {
+      "filename": "00-BD-KB-MASTER-ENCYCLOPEDIA.md",
+      "size_bytes": 9148,
+      "sha256": "35741de0caca5f5c6da5e77f19dc19300ee630d034c5c4fd7d89a3c165a65a9e",
+      "lines": 106
+    },
+    {
+      "filename": "01-BOYLENET-27NODE-CLUSTER-AND-12U-RACK-BIBLE.md",
+      "size_bytes": 12367,
+      "sha256": "f4f9a6f21ae96dd5de0d1b1d3b4839c542c0932b4776bf22f9254cc013980f83",
+      "lines": 100
+    },
+    {
+      "filename": "01-BULKDOWNLOADER-ARCHITECTURE-AND-CONTRACTS.md",
+      "size_bytes": 6459,
+      "sha256": "0c83b238046f7e02ad70296f5fb57f0f823b36c65ec3bb6c03522a2a53eebf08",
+      "lines": 85
+    },
+    {
+      "filename": "02-BOYLENET-27NODE-CLUSTER-12U-RACK-VSAN-25GBE.md",
+      "size_bytes": 12367,
+      "sha256": "f4f9a6f21ae96dd5de0d1b1d3b4839c542c0932b4776bf22f9254cc013980f83",
+      "lines": 100
+    },
+    {
+      "filename": "03-86-MODEL-VAULT-BENCHMARKS-AND-AIRGAP.md",
+      "size_bytes": 13267,
+      "sha256": "b0ef4577a1ce7404e28028104db0b246ae0c90c0f7bf90be2de53f2d0b09b3ae",
+      "lines": 115
+    },
+    {
+      "filename": "04-FLEET-LAW-RULES-1-86-AND-O1740-ROUTING.md",
+      "size_bytes": 7605,
+      "sha256": "5b2b9c01d3a509b7319e6f3ce7ee831a5c52716a7ebe400bbde1c543e469bdd7",
+      "lines": 67
+    },
+    {
+      "filename": "05-CI-TAXONOMY-RECOVERY-AND-MCP-TOOLS.md",
+      "size_bytes": 9818,
+      "sha256": "44f7d36ab82fa345d7b84acb7acbd4ffaf632d736a7dd6c77ff3d825f82d3e5e",
+      "lines": 83
+    },
+    {
+      "filename": "05-SWARM-OPERATIONS-RECEIPTS-AND-PLAYBOOKS.md",
+      "size_bytes": 707357,
+      "sha256": "4978ec46a6fcee2206cd04553e1cbc6f4f6ac447e75b245081430a215ce0ffeb",
+      "lines": 6652
+    },
+    {
+      "filename": "06-5PLATFORM-MCP-MODS-HTTPS-AND-215-LEDGER.md",
+      "size_bytes": 15304,
+      "sha256": "64470b4191ee229be6449c97c3e075cd581ded6097d803bea87f85263f741d73",
+      "lines": 133
+    }
+  ]
+}
